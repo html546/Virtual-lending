@@ -29,7 +29,7 @@ a:focus,a:hover{
     position: relative;
 }
 .navbar-brand,.navbar-nav>li>a{
-    line-height: auto;
+    line-height: 50px;
 }
 .navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a{
     color: #fff;
@@ -167,8 +167,12 @@ a:focus,a:hover{
         margin-left: 1%;
         margin-bottom:1%;
     }
+    .navbar-brand{
+        line-height: 50px;
+    }
     .navbar-nav>li>a{
-        padding: 10px 10px;
+        padding: 15px 10px;
+        line-height: 50px;
     }
     .navbar>.container .navbar-brand{
         font-size: 18px;
