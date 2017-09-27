@@ -78,7 +78,7 @@ a:focus,a:hover{
     color: #c7b07e;
 }
 .numProduct{
-    margin-top: 85px;
+    margin-top: 70px;
 }
 .title+p{
     margin-bottom: 26px;
@@ -117,7 +117,7 @@ a:focus,a:hover{
 }
 /* 游戏类 */
 .games{
-    margin-top: 80px;
+    margin-top: 70px;
 }
 .games .row div img{
     display: block;
