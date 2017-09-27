@@ -1,7 +1,4 @@
 /* 登录表单 */
-.login-right{
-    position: relative;
-}
 .login-right-form{
     width: 260px;
     height: 360px;
@@ -9,8 +6,6 @@
     opacity: .9;
     border-radius: 5px;
     padding: 40px 30px 0px;
-    position: absolute;
-    right: 0px;
 }
 .login-right-form p.loginIn{
     letter-spacing: 4px;
@@ -41,5 +36,8 @@
 }
 .loginbtn{
     background: #c6b07f!important;
+    color: #fff;
+}
+.loginbtn:hover,.loginbtn:focus{
     color: #fff;
 }
