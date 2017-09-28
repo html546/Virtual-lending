@@ -1,0 +1,18 @@
+.bit-pledge{
+    background: #f5f5f5;
+}
+a{
+    color: #000;
+}
+.bit-pledge>.container>ol>li>a:hover,.bit-pledge>.container>ol>li>a:focus{
+    color: #000!important;
+}
+.bit-pledge>.container>ol>li>a.active2{
+    color: #c9b489;
+}
+.bit-pledge>.container>ol>li>a.active2:hover,.bit-pledge>.container>ol>li>a.active2:focus{
+    color: #c9b489!important;
+}
+.breadcrumb>li+li:before{
+    content:'>';
+}
