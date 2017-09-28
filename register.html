@@ -183,6 +183,23 @@
         if (el.readOnly) el.checked=el.readOnly=false;
         else if (!el.checked) el.readOnly=el.indeterminate=true;
     }
+    $(function(){
+      $('.identify-right button').click(function(){
+        clearInterval(timer);
+        var _this = this;
+        var n = 60;
+        var timer = setInterval(function(){
+            n--;
+            $(_this).text('还有'+n+'s');
+            $(_this).attr('disabled','disabled');
+            if(n<=0){
+              clearInterval(timer);
+              $(_this).text('获取验证码');
+              $(_this).removeAttr('disabled');
+            }
+        },1000)
+      })
+    })
 </script>
 </body>
 

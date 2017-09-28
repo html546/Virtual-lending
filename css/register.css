@@ -54,7 +54,8 @@
     padding: 7px 5px!important;
     margin-left: 12px;
     border: 1px solid #c6b07f;
-    color: #c6b07f
+    color: #c6b07f;
+    width: 72px;
 }
 .agree{
     white-space: nowrap;
