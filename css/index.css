@@ -37,13 +37,19 @@ a:focus,a:hover{
 .navbar-inverse .navbar-nav>li{
     position: relative;
 }
-.navbar-inverse .navbar-nav>li:focus::after, .navbar-inverse .navbar-nav>li:hover::after{
+.navbar-inverse .navbar-nav>li>a:focus::after, .navbar-inverse .navbar-nav>li>a:hover::after,.navbar-inverse .navbar-nav>li>a.active::after{
     content: url(../images/syxiahuaxianzhishi.png);
     position: absolute;
-    bottom: -2px;
+    bottom: -20px;
     left: 50%;
     margin-left: -6px;
 }    
+.navbar-inverse .navbar-nav>li>a.entry.active::after,.navbar-inverse .navbar-nav>li>a.register.active::after{
+    bottom: -21px;
+}
+.navbar-inverse .navbar-nav>li>a.entry:focus::after, .navbar-inverse .navbar-nav>li>a.entry:hover::after,.navbar-inverse .navbar-nav>li>a.register:focus::after, .navbar-inverse .navbar-nav>li>a.register:hover::after,.navbar-inverse .navbar-nav>li>a.notice:focus::after, .navbar-inverse .navbar-nav>li>a.notice:hover::after{
+    bottom: -21px;
+}
 .navbar-inverse .navbar-brand{
     font-size: 16px;
     height: 80px;
@@ -54,8 +60,8 @@ a:focus,a:hover{
 .navbar-inverse .navbar-nav>li>a.entry,.navbar-inverse .navbar-nav>li>a.register,.navbar-inverse .navbar-nav>li>a.notice{
     font-size: 14px;
 }
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
-    color: #c5b17f;
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a.active{
+    color: #c5b17f!important;
     border-bottom: 4px solid #c5b17f;
 }
 .navbar-collapse.in{
