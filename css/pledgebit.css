@@ -52,3 +52,36 @@ a{
     margin-right: 5px;
     color: #ccc;
 }
+.hr-line-dashed{
+    border: 1px solid #eee;
+    height: 0px;
+}
+/* 抵押信息表单 */
+.red-display{
+    color: #dc4236;
+}
+.pledge-detail{
+    padding-top: 30px;
+}
+.convert{
+    background-image: url(../images/zhuanhuan.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 20px;
+}
+.pledge-btn{
+    background: #c6b07f;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+.pledge-btn:hover{
+    color: #fff;
+}
+.occupy{
+    margin-bottom: 40px;
+}

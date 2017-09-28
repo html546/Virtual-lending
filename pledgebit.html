@@ -34,7 +34,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="active" href="#">首页</a></li>
+            <li><a class="active" href="./index.html">首页</a></li>
             <li><a href="#">我要赎回</a></li>
             <li><a href="#">财务中心</a></li>
             <li><a href="#">个人中心</a></li>
@@ -84,14 +84,44 @@
         <div class="pledge-detail">
             <form action="" class="form-horizontal">
                 <div class="form-group">
-                    <label for="cycle">
-                        抵押周期
-                    </label>
-                    <select name="" id="cycle" class="form-control">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
+                    <label for="cycle" class="control-label col-md-2">抵押周期 : </label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="cycle" placeholder="30天">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">抵押利率 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static">0.2%-0.6%</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">市场价 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static"><span class="red-display">￥24814.9</span>CNY/BTC</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">抵押额度 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static"><span class="red-display">40%-60%</span></p>
+                    </div>
+                </div>
+                <div class="form-group occupy">
+                    <label class="col-md-2 control-label">抵押数量 : </label>
+                    <div class="col-md-3">
+                        <input type="number" class="form-control" placeholder="输入您想抵押的数量">
+                    </div>
+                    <div class="col-md-1 convert"></div>
+                    <div class="col-md-3">
+                        <input type="number" class="form-control" placeholder="输入您想抵押的金钱">
+                    </div>
+                    <p class="form-control-static">仅供参考</p>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <button type="submit" class="btn pledge-btn">立即抵押</button>
+                    </div>
                 </div>
             </form>
         </div>
