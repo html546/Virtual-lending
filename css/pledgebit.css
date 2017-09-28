@@ -97,3 +97,15 @@ a{
 .note ul>li{
     line-height: 30px;
 }
+.formBtn{
+    width: 36px;
+    background: #fff;
+    color: #cebc94;
+}
+.formBtn:hover{
+    color: #cebc94;
+}
+.formBtn:focus{
+    background: #c6b07f;
+    color: #fff;
+}

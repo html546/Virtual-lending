@@ -148,13 +148,22 @@
   </div>
   <script src="./js/layer.js"></script>
   <script>
+      let btnGroup = '';
+      for(var i = 1;i<=90;i++){
+        btnGroup+=`<button class="btn btn-sm formBtn" onclick="text(${i});">${i}</button>`;
+      }
+      function text(i){
+        // alert(i);
+        $('#cycle').val(i+'天');
+        layer.closeAll();
+      }
       $('#cycle').focus(function(){
           layer.open({
               type:1,
-              title:'选择抵押周期(天)',
+              title:['选择抵押周期(天)','margin-left:60px;text-align:center;'],
               closeBtn:1,
               shadeClose:true,
-              content:''
+              content:btnGroup
           })
       })
   </script>
