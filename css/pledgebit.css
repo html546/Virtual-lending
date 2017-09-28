@@ -4,6 +4,7 @@
 a{
     color: #000;
 }
+/* 面包屑导航 */
 .bit-pledge>.container>ol>li>a:hover,.bit-pledge>.container>ol>li>a:focus{
     color: #000!important;
 }
@@ -13,6 +14,41 @@ a{
 .bit-pledge>.container>ol>li>a.active2:hover,.bit-pledge>.container>ol>li>a.active2:focus{
     color: #c9b489!important;
 }
+.breadcrumb{
+    margin-bottom: 15px;
+}
 .breadcrumb>li+li:before{
     content:'>';
+}
+/* 抵押信息 */
+.state{
+    height: 30px;
+    margin-bottom: 15px;
+}
+.pledge-message .circle{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    color: #9a9a9a;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #e0e0e0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pledge-message.active4 .circle{
+    background: #c8b080;
+    color: #fff;
+    margin-left: 40px;
+}
+.pledge-message.active4 p{
+    color: #c8b080;
+}
+.pledge-message p{
+    line-height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #ccc;
 }
