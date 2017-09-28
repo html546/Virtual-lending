@@ -118,14 +118,25 @@
                     </div>
                     <p class="form-control-static">仅供参考</p>
                 </div>
-                <div class="form-group">
+                <div class="form-group occupy">
                     <div class="row">
                         <button type="submit" class="btn pledge-btn">立即抵押</button>
                     </div>
                 </div>
             </form>
+            <div class="hr-line-dashed"></div>
+            <div class="note">
+                <h4>抵押须知</h4>
+                <ul>
+                    <li>1、抵押须知详细内容-----------------------------</li>
+                    <li>2、抵押须知详细内容抵押须知详细内容抵押须知详细内容---------------------------------</li>
+                    <li>3、抵押须知详细内容抵押须知详细内容---------------------------</li>
+                    <li>4、-----------------------------</li>
+                    <li>5、--------------------------------------------</li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </div>
   </div>
   <!-- footer -->
   <div class="base container-fulid">
@@ -135,7 +146,18 @@
           <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
       </div>
   </div>
-  <script src="./js/index.js"></script>
+  <script src="./js/layer.js"></script>
+  <script>
+      $('#cycle').focus(function(){
+          layer.open({
+              type:1,
+              title:'选择抵押周期(天)',
+              closeBtn:1,
+              shadeClose:true,
+              content:''
+          })
+      })
+  </script>
 </body>
 
 </html>

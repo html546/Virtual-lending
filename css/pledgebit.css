@@ -85,3 +85,15 @@ a{
 .occupy{
     margin-bottom: 40px;
 }
+/* 抵押须知 */
+.note{
+    margin-top: 16px;
+    padding-left: 30px;
+    padding-bottom: 100px;
+}
+.note h4{
+    font-weight: 600;
+}
+.note ul>li{
+    line-height: 30px;
+}
