@@ -85,6 +85,11 @@ a{
 .occupy{
     margin-bottom: 40px;
 }
+#cycle{
+    background-image: url(../images/xiala.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
 /* 抵押须知 */
 .note{
     margin-top: 16px;
