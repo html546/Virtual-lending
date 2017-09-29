@@ -25,6 +25,9 @@ a{
     height: 30px;
     margin-bottom: 15px;
 }
+.state div.active4:nth-child(2) .circle{
+    margin-left: 0px;
+}
 .pledge-message .circle{
     display: inline-block;
     width: 30px;
@@ -113,4 +116,19 @@ a{
 .formBtn:focus{
     background: #c6b07f;
     color: #fff;
+}
+/* 审核中 */
+.auditing{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 166px;
+}
+.cancel{
+    border: 1px solid #c6b07f;
+    color: #c5b17c;
+}
+.cancel:hover,.cancel:focus,.cancel:active,.cancel:active:hover,.cancel:active:focus{
+    border: 1px solid #c6b07f;
+    color:#c5b17c;
 }
