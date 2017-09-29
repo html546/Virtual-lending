@@ -23,9 +23,9 @@ a{
 /* 抵押信息 */
 .state{
     height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
-.state div.active4:nth-child(2) .circle{
+.state div.active4:not(:first-child) .circle{
     margin-left: 0px;
 }
 .pledge-message .circle{
@@ -44,7 +44,7 @@ a{
 .pledge-message.active4 .circle{
     background: #c8b080;
     color: #fff;
-    margin-left: 40px;
+    margin-left: 5px;
 }
 .pledge-message.active4 p{
     color: #c8b080;
@@ -66,6 +66,17 @@ a{
 .pledge-detail{
     padding-top: 30px;
 }
+.pledge-detail .form-horizontal .form-group{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.pledge-detail label{
+    color: #666;
+    font-weight: normal;
+}
+.pledge-detail p.gray{
+    color: 
+}
 .convert{
     background-image: url(../images/zhuanhuan.png);
     background-size: 20px 20px;
@@ -73,6 +84,7 @@ a{
     background-position: center;
     height: 30px;
     width: 20px;
+    padding: 0px;
 }
 .pledge-btn{
     background: #c6b07f;
@@ -106,7 +118,9 @@ a{
     line-height: 30px;
 }
 .formBtn{
-    width: 36px;
+    width: 60px;
+    height: calc(355px/9);
+    font-size: 15px;
     background: #fff;
     color: #cebc94;
 }
@@ -131,4 +145,31 @@ a{
 .cancel:hover,.cancel:focus,.cancel:active,.cancel:active:hover,.cancel:active:focus{
     border: 1px solid #c6b07f;
     color:#c5b17c;
+}
+/* 调节自适应 */
+@media (min-width:768px){
+    .state{
+        margin-bottom: 40px;
+    }
+}
+@media (min-width:452px){
+    .state{
+        margin-bottom: 15px;
+    }
+}
+@media (min-width:992px) {
+    .state{
+        margin-bottom: 15px;
+    }
+    .pledge-message.active4 .circle{
+        margin-left: 40px;
+    }
+}
+@media (min-width:1200px){
+    .state{
+        margin-bottom: 15px;
+    }
+    .pledge-message.active4 .circle{
+        margin-left: 40px;
+    }
 }

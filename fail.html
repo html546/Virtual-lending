@@ -64,12 +64,12 @@
                 <p class="pull-left">抵押信息</p>
                 <p class="pull-left hidden-xs">——————</p>
             </div>
-            <div class="pledge-message pull-left">
+            <div class="pledge-message pull-left active4">
                 <div class="circle pull-left">2</div>
                 <p class="pull-left">审核中</p>
                 <p class="pull-left hidden-xs">——————————</p>
             </div>
-            <div class="pledge-message pull-left">
+            <div class="pledge-message pull-left active4">
                 <div class="circle pull-left">3</div>
                 <p class="pull-left">审核通过已放款</p>
                 <p class="pull-left hidden-xs">———</p>
@@ -84,43 +84,40 @@
         <div class="pledge-detail">
             <form action="" class="form-horizontal">
                 <div class="form-group">
-                    <label for="cycle" class="control-label col-md-2 col-sm-2 col-xs-6">抵押周期 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <input type="text" class="form-control" id="cycle" placeholder="30天">
+                    <label for="cycle" class="control-label col-md-2">抵押周期 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static gray">30天</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 col-sm-2 col-xs-6 control-label">抵押利率 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <p class="form-control-static">0.2%-0.6%</p>
+                    <label class="col-md-2 control-label">抵押利率 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static gray">0.2%-0.6%</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 col-sm-2 col-xs-6 control-label">市场价 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <p class="form-control-static" style="color:#d1d1d1"><span class="red-display">￥24814.9</span>CNY/BTC</p>
+                    <label class="col-md-2 control-label">市场价 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static gray"><span>￥24814.9</span>CNY/BTC</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 col-sm-2 col-xs-6 control-label">抵押额度 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <p class="form-control-static"><span class="red-display">40%-60%</span></p>
+                    <label class="col-md-2 control-label">抵押额度 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static gray"><span>40%-60%</span></p>
                     </div>
                 </div>
                 <div class="form-group occupy">
-                    <label class="col-md-2 col-sm-2 col-xs-3 control-label">抵押数量 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <input type="number" class="form-control" placeholder="输入您想抵押的数量">
+                    <label class="col-md-2 control-label">抵押数量 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static gray"><span>0.666BTB</span></p>
                     </div>
-                    <div class="col-md-1 col-sm-1 col-xs-1 convert"></div>
-                    <div class="col-md-3 col-xs-3">
-                        <input type="number" class="form-control" placeholder="输入您想抵押的金钱">
-                    </div>
-                    <p class="form-control-static">仅供参考</p>
                 </div>
+                
                 <div class="form-group occupy">
-                    <div class="row">
-                        <button type="submit" class="btn pledge-btn">立即抵押</button>
+                    <div class="auditing">
+                        <p class="form-control-static pull-left">正在审核中...&nbsp;&nbsp;&nbsp;</p>
+                        <button type="button" class="btn btn-default cancel">取消抵押</button>
                     </div>
                 </div>
             </form>
@@ -146,28 +143,6 @@
           <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
       </div>
   </div>
-  <script src="./js/layer.js"></script>
-  <script>
-      let btnGroup = '';
-      for(var i = 1;i<=90;i++){
-        btnGroup+=`<button class="btn btn-sm formBtn" onclick="text(${i});">${i}</button>`;
-      }
-      function text(i){
-        // alert(i);
-        $('#cycle').val(i+'天');
-        layer.closeAll();
-      }
-      $('#cycle').focus(function(){
-          layer.open({
-              type:1,
-              title:['选择抵押周期(天)','padding-left:80px;text-align:center;'],
-              closeBtn:1,
-              shadeClose:true,
-              content:btnGroup,
-              area:['600px','400px']
-          })
-      })
-  </script>
 </body>
 
 </html>
