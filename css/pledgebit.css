@@ -173,3 +173,7 @@ a{
         margin-left: 40px;
     }
 }
+/* 审核未通过 */
+.text-danger2{
+    color: #dc4436;
+}
