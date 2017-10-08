@@ -173,3 +173,8 @@ a{
         margin-left: 40px;
     }
 }
+/* 审核通过 */
+.occupy-p{
+    margin-right: 10px;
+    line-height: 34px;
+}
