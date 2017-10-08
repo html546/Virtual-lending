@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">  
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/pledgebit.css">
+  <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
+    <script src="./js/bootstrap-datetimepicker.min.js"></script>
+    <script src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
 </head>
 
 <body>
@@ -90,24 +94,86 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-md-2 control-label">交易链接 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static gray"><a href="#">/http/www.jiaoyilianjie.com/</a></p>
+                    </div>
+                </div>
+                <div class="form-group occupy">
+                    <label class="col-md-2 control-label">交易账号 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static">交易账号信息</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">商品名称 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static">王者荣耀账号</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">所属游戏 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static">王者荣耀</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">抵押类型 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static">游戏类</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ServiceArea" class="col-md-2 control-label">抵押类型 : </label>
+                    <div class="col-md-3">
+                         <input type="text" class="form-control" id="ServiceArea" placeholder="请输入游戏区服">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pledgeTime" class="col-md-2 control-label">抵押时间 : </label>
+                    <div class="input-group date form_date col-md-3 pull-left " data-date="" data-date-format="dd MM yyyy" data-link-field="pledgeTime" data-link-format="yyyy-mm-dd">
+                        <input class="form-control" size="16" type="text" value="" readonly placeholder="请选择抵押时间">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <input type="hidden" id="pledgeTime" value="" /><br/>
+                </div>
+                <div class="form-group">
+                    <label for="pledgeNumber" class="col-md-2 control-label">抵押编号 : </label>
+                    <div class="col-md-3">
+                         <input type="text" class="form-control" id="pledgeNumber" placeholder="请输入抵押编号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="describe" class="col-md-2 control-label">描述 : </label>
+                    <div class="col-md-9">
+                        <textarea id="describe" class="form-control" rows="3" placeholder="请详细描述您要抵押的商品(账号或者装备)信息，如身份证是否设置、账号等级、好友数量、英雄数量、皮肤数量等信息"></textarea> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cycle" class="control-label col-md-2 col-sm-2 col-xs-6">抵押周期 : </label>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <input type="text" class="form-control" id="cycle" placeholder="30天">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-md-2 control-label">抵押利率 : </label>
                     <div class="col-md-3">
                         <p class="form-control-static">0.2%-0.6%</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 col-sm-2 col-xs-6 control-label">市场价 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <p class="form-control-static" style="color:#d1d1d1"><span class="red-display">￥24814.9</span>CNY/BTC</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 col-sm-2 col-xs-6 control-label">抵押额度 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <p class="form-control-static"><span class="red-display">40%-60%</span></p>
+                    <label class="col-md-2 control-label">市场价 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static"><span class="red-display">￥666</span></p>
                     </div>
                 </div>
                 <div class="form-group occupy">
+                    <label class="col-md-2 control-label">抵押额度 : </label>
+                    <div class="col-md-3">
+                        <p class="form-control-static"><span class="red-display">40%-60%</span></p>
+                    </div>
+                </div>
+                <!-- <div class="form-group occupy">
                     <label class="col-md-2 col-sm-2 col-xs-3 control-label">抵押数量 : </label>
                     <div class="col-md-3 col-sm-3 col-xs-3">
                         <input type="number" class="form-control" placeholder="输入您想抵押的数量">
@@ -117,7 +183,7 @@
                         <input type="number" class="form-control" placeholder="输入您想抵押的金钱">
                     </div>
                     <p class="form-control-static">仅供参考</p>
-                </div>
+                </div> -->
                 <div class="form-group occupy">
                     <div class="row">
                         <button type="submit" class="btn pledge-btn">立即抵押</button>
@@ -167,6 +233,14 @@
               area:['600px','400px']
           })
       })
+      $('.form_date').datetimepicker({
+        todayBtn:  1,
+		autoclose: 1,
+		minView: 2,
+        language:'zh-CN',
+        format:'yyyy-mm-dd',
+        pickerPosition:'bottom-right'
+      });
   </script>
 </body>
 

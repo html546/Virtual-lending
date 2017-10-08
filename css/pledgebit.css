@@ -178,3 +178,11 @@ a{
     margin-right: 10px;
     line-height: 34px;
 }
+/* 游戏抵押 */
+.form_date{
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+}
+#describe{
+    resize: none;
+}
