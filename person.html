@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的抵押</title>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/finance.css">
+    <link rel="stylesheet" href="./css/person.css">
+    <!-- <link rel="stylesheet" href="./css/pledgebit.css"> -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 导航与背景 -->
+    <div class="container-fulid">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                    <a class="navbar-brand" href="#">LOGO果粒多数字商品抵押</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./index.html">首页</a></li>
+                        <li><a href="#">我要赎回</a></li>
+                        <li><a href="./finance.html">财务中心</a></li>
+                        <li><a class="active" href="#">个人中心</a></li>
+                        <li><a href="./login.html" class="entry">登录</a></li>
+                        <li><a href="./register.html" class="register">注册</a></li>
+                        <li><a href="#" class="notice">公告</a></li>
+                        <li><a href="#" class="help">帮助</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- 我的抵押详情 -->
+    <div class="container-fulid graybg">
+        <div class="container">
+            <ul class="nav nav-tabs" id="my-tab" role="tablist">
+                <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">个人资料</a></li>
+                <li role="presentation"><a href="#credit" aria-controls="credit" role="tab" data-toggle="tab">信用积分</a></li>
+                <li role="presentation"><a href="#realName" aria-controls="realName" role="tab" data-toggle="tab">实名认证</a></li>
+                <li role="presentation"><a href="#safe" aria-controls="safe" role="tab" data-toggle="tab">安全设置</a></li>
+                <li role="presentation"><a href="#cservice" aria-controls="cservice" role="tab" data-toggle="tab">客服中心</a></li>
+                <li role="presentation"><a href="#notice" aria-controls="notice" role="tab" data-toggle="tab">官方公告</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="data">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="username" class="control-label col-md-2">用户名:</label>
+                                    <div class="col-md-3">
+                                        <p class="form-control-static" id="username">yonghuming</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="list-group-item">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="uid" class="control-label col-md-2">UID:</label>
+                                    <div class="col-md-3">
+                                        <p class="form-control-static" id="uid">88888888</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="list-group-item">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="nickname" class="control-label col-md-2">昵称:</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" id="nickname" placeholder="请输入您的昵称">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="list-group-item">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="tel" class="control-label col-md-2">昵称:</label>
+                                    <div class="col-md-3">
+                                        <p class="form-control-static" id="tel">15854901002</p>
+                                    </div>
+                                    <a class="pull-right form-control-static">更换手机号<i class="glyphicon glyphicon-menu-down"></i></a>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-3">
+                                        <input type="text" placeholder="输入旧手机验证码">
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="list-group-item">
+                            <form action="" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="email" class="control-label col-md-2">邮箱:</label>
+                                    <div class="col-md-3">
+                                        <p class="form-control-static" id="email">您还没有绑定邮箱</p>
+                                    </div>
+                                    <a class="pull-right form-control-static">绑定邮箱</a>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="credit">
+                    222
+                </div>
+                <div role="tabpanel" class="tab-pane" id="realName">
+                    333
+                </div>
+                <div role="tabpanel" class="tab-pane" id="safe">
+                    444
+                </div>
+                <div role="tabpanel" class="tab-pane" id="cservice">
+                    555
+                </div>
+                <div role="tabpanel" class="tab-pane" id="notice">
+                    666
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="base container-fulid">
+        <div class="container">
+            <p class="qq pull-left">QQ群: <span>66666666</span> </p>
+            <p class="email pull-left hidden-xs">邮箱: <span>guolicheng@163.com</span></p>
+            <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
+        </div>
+    </div>
+    <script>
+        $('#my-tab a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    </script>
+</body>
+
+</html>
