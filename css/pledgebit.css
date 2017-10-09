@@ -186,3 +186,30 @@ a{
 #describe{
     resize: none;
 }
+.post_upload>div:not(:last-child){
+    position: relative;
+    width: 180px;
+    height: 140px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+.post_upload>div:first-child{
+    display: block;
+}
+.post_upload img{
+    width: 180px;
+    height: 140px;
+}
+.post_upload input[type=file]{
+    position: absolute;
+    width: 180px;
+    height: 140px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+}
