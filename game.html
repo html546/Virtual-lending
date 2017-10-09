@@ -12,11 +12,14 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/pledgebit.css">
   <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="./css/fileinput.min.css">
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
     <script src="./js/bootstrap-datetimepicker.min.js"></script>
     <script src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="./js/fileinput.min.js"></script>
+    <script src="./js/fileinput_locale_zh.js"></script>
 </head>
 
 <body>
@@ -150,6 +153,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="picture" class="col-md-2 control-label">图片 : </label>
+                    <div class="col-md-9">
+                        <input id="picture" name="picture" type="file" class="file" multiple data-show-upload='true' data-show-caption='true'>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="cycle" class="control-label col-md-2 col-sm-2 col-xs-6">抵押周期 : </label>
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <input type="text" class="form-control" id="cycle" placeholder="30天">
@@ -173,17 +182,6 @@
                         <p class="form-control-static"><span class="red-display">40%-60%</span></p>
                     </div>
                 </div>
-                <!-- <div class="form-group occupy">
-                    <label class="col-md-2 col-sm-2 col-xs-3 control-label">抵押数量 : </label>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
-                        <input type="number" class="form-control" placeholder="输入您想抵押的数量">
-                    </div>
-                    <div class="col-md-1 col-sm-1 col-xs-1 convert"></div>
-                    <div class="col-md-3 col-xs-3">
-                        <input type="number" class="form-control" placeholder="输入您想抵押的金钱">
-                    </div>
-                    <p class="form-control-static">仅供参考</p>
-                </div> -->
                 <div class="form-group occupy">
                     <div class="row">
                         <button type="submit" class="btn pledge-btn">立即抵押</button>
@@ -241,6 +239,73 @@
         format:'yyyy-mm-dd',
         pickerPosition:'bottom-right'
       });
+      $(function () {
+            fishFileInput("picture","#");
+     })
+     function fishFileInput(ctrlName, uploadUrl) {
+        $("#picture").fileinput({
+            language: 'zh', //设置语言
+            uploadUrl: '#', //上传的地址
+            enctype: 'multipart/form-data',
+            allowedFileExtensions : ['jpg', 'png','bmp','jpeg'],//接收的文件后缀
+            showUpload: false, //是否显示上传按钮
+            showPreview: true,              //展前预览
+            showCaption: false,//是否显示标题
+            maxFileSize : 10000,//上传文件最大的尺寸
+            maxFilesNum : 10,//
+            dropZoneEnabled: false,//是否显示拖拽区域
+            browseClass: "btn btn-primary", //按钮样式
+            uploadAsync: false,
+            layoutTemplates :{
+                // actionDelete:'', //去除上传预览的缩略图中的删除图标
+                actionUpload:'',//去除上传预览缩略图中的上传图片；
+                actionZoom:''   //去除上传预览缩略图中的查看详情预览的缩略图标。
+            },
+            uploadExtraData:function (previewId, index) {
+                //向后台传递id作为额外参数，是后台可以根据id修改对应的图片地址。
+                var obj = {};
+                obj.id = fishId;
+                return obj;
+            }
+        }).on("filebatchuploadsuccess", function(event, data) {
+            if(data.response){
+                closeModal('fishAddDetail') //关闭模态框。
+                $("#bootstraptable_fishcontent").bootstrapTable("refresh");
+            }
+        }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+            console.log('文件上传失败！'+msg);
+        });
+    }
+    //新增鱼类名录模态框的提交按钮点击事件。
+    $(".fileinput-upload-button").click(function () {
+        var picturename="";//获取上传的文件的后缀名，如果不是jpg,或者png的话不出发上传，弹出提示，表单里面的其他内容也不上传。
+        picturename=$("#picture").val().substring($("#picture").val().indexOf('.'),$("#picture").val().length).toUpperCase();
+        /*当上传的文件的格式是.png .jpg .PNG .JPG时 先将表单内的除图片以外的东西提交到后天，然后在触发插件，将图片上传，保存。
+        */
+        if (picturename ==".JPG"  || picturename ==".PNG" || picturename =="" || picturename==".BMP"|| picturename==".JPEG") {
+            $.ajax({
+                type: 'post',
+                url: '#',
+                data: $("#form_addfishContent").serialize(),
+                success: function (data) {
+                    fishId = data;
+                    //不上传图片时，不触发bootstrap 上传插件的初始化方法。仅将表单里面的（除图片以外的）内容提交，
+                    if ($("#picture").val() != "") {
+                        $('#picture').fileinput('upload'); //触发插件开始上传。
+                    }
+                    else {
+                        closeModal('fishAddDetail');
+                        $("#bootstraptable_fishcontent").bootstrapTable("refresh");
+                    }
+
+                }
+            });
+        }else {
+            alert("只能上传.jpg，.png，.PNG,.JPG,bmp,jpeg格式的图片");
+            return false;
+        }
+
+    });
   </script>
 </body>
 
