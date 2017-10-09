@@ -68,7 +68,7 @@
                     <p class="pull-left">抵押信息</p>
                     <p class="pull-left hidden-xs">——————</p>
                 </div>
-                <div class="pledge-message pull-left">
+                <div class="pledge-message pull-left active4">
                     <div class="circle pull-left">2</div>
                     <p class="pull-left">审核中</p>
                     <p class="pull-left hidden-xs">——————————</p>
@@ -108,13 +108,13 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label">商品名称 : </label>
                         <div class="col-md-3">
-                            <p class="form-control-static">王者荣耀账号</p>
+                            <p class="form-control-static">大逃杀账号</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-2 control-label">所属游戏 : </label>
                         <div class="col-md-3">
-                            <p class="form-control-static">王者荣耀</p>
+                            <p class="form-control-static">绝地求生</p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -126,77 +126,39 @@
                     <div class="form-group">
                         <label for="ServiceArea" class="col-md-2 control-label">所属区服 : </label>
                         <div class="col-md-3">
-                            <input type="text" class="form-control" id="ServiceArea" placeholder="请输入游戏区服">
+                            <p class="form-control-static">哪个区哪个服</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="pledgeTime" class="col-md-2 control-label">抵押时间 : </label>
-                        <div class="input-group date form_date col-md-3 pull-left " data-date="" data-date-format="dd MM yyyy" data-link-field="pledgeTime"
-                            data-link-format="yyyy-mm-dd">
-                            <input class="form-control" size="16" type="text" value="" readonly placeholder="请选择抵押时间">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        <div class="col-md-3">
+                            <p class="form-control-static">哪天抵押的日期</p>
                         </div>
-                        <input type="hidden" id="pledgeTime" value="" /><br/>
                     </div>
                     <div class="form-group">
                         <label for="pledgeNumber" class="col-md-2 control-label">抵押编号 : </label>
                         <div class="col-md-3">
-                            <input type="text" class="form-control" id="pledgeNumber" placeholder="请输入抵押编号">
+                            <p class="form-control-static">请输入抵押编号</p>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group occupy">
                         <label for="describe" class="col-md-2 control-label">描述 : </label>
                         <div class="col-md-9">
-                            <textarea id="describe" class="form-control" rows="3" placeholder="请详细描述您要抵押的商品(账号或者装备)信息，如身份证是否设置、账号等级、好友数量、英雄数量、皮肤数量等信息"></textarea>
+                            <p class="form-control-static">示例身份证已设置、账号好多星、好友200、英雄19个、皮肤数量6个</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="picture" class="col-md-2 control-label">图片 : </label>
                         <div class="col-md-9 post_upload">
-                            <!-- <input id="picture" name="picture" type="file" class="file" multiple data-show-upload='true' data-show-caption='true'> -->
                             <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img1" value="" class="myfile1" onchange="loadImg1(this,8)" />
+                                <img src="../images/tianjiatupian.png" alt="" />
                             </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img2" value="" class="myfile2" onchange="loadImg1(this,7)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img3" value="" class="myfile3" onchange="loadImg1(this,6)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img4" class="myfile4" onchange="loadImg1(this,5)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img5" class="myfile5" onchange="loadImg1(this,4)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img6" class="myfile6" onchange="loadImg1(this,3)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img7" class="myfile7" onchange="loadImg1(this,2)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img8" class="myfile8" onchange="loadImg1(this,1)" />
-                            </div>
-                            <div>
-                                <img src="../images/game.png" alt="" />
-                                <input type="file" name="img9" class="myfile9" onchange="loadImg1(this,0)" />
-                            </div>
-                            <p>您还能上传<span>9</span>张图片</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="cycle" class="control-label col-md-2 col-sm-2 col-xs-6">抵押周期 : </label>
                         <div class="col-md-3 col-sm-3 col-xs-6">
-                            <input type="text" class="form-control" id="cycle" placeholder="30天">
+                            <p class="form-control-static">30天</p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -218,8 +180,9 @@
                         </div>
                     </div>
                     <div class="form-group occupy">
-                        <div class="row">
-                            <button type="submit" class="btn pledge-btn">立即抵押</button>
+                        <div class="auditing">
+                            <p class="form-control-static pull-left">正在审核中...&nbsp;&nbsp;&nbsp;</p>
+                            <button type="button" class="btn btn-default cancel">取消抵押</button>
                         </div>
                     </div>
                 </form>
@@ -247,46 +210,7 @@
     </div>
     <script src="./js/layer.js"></script>
     <script>
-        let btnGroup = '';
-        for (var i = 1; i <= 90; i++) {
-            btnGroup += `<button class="btn btn-sm formBtn" onclick="text(${i});">${i}</button>`;
-        }
-        function text(i) {
-            // alert(i);
-            $('#cycle').val(i + '天');
-            layer.closeAll();
-        }
-        $('#cycle').focus(function () {
-            layer.open({
-                type: 1,
-                title: ['选择抵押周期(天)', 'padding-left:80px;text-align:center;'],
-                closeBtn: 1,
-                shadeClose: true,
-                content: btnGroup,
-                area: ['600px', '400px']
-            })
-        })
-        $('.form_date').datetimepicker({
-            todayBtn: 1,
-            autoclose: 1,
-            minView: 2,
-            language: 'zh-CN',
-            format: 'yyyy-mm-dd',
-            pickerPosition: 'bottom-right'
-        });
-        function loadImg1(obj,num){
-				var file1 = obj.files[0];
-				var reader = new FileReader();
-				var imgFile;
-				reader.onload=function(e){
-					imgFile = e.target.result;
-					// var divs = $('.post_upload').children('div');
-					$(obj).prev('img').attr('src', imgFile).parent("div").next("div").show();
-					// divs.eq(0).next('div').show();
-					$('.post_upload>p').children('span').html(num);
-				};
-				reader.readAsDataURL(file1);
-			}
+       
     </script>
 </body>
 

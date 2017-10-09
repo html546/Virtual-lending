@@ -179,6 +179,13 @@ a{
     line-height: 34px;
 }
 /* 游戏抵押 */
+.pledge-detail a{
+    color: #337ab7;
+    text-decoration: none;
+}
+.pledge-detail a:hover{
+    color: #337ab7!important;
+}
 .form_date{
     padding-left: 15px!important;
     padding-right: 15px!important;
