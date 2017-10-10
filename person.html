@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/finance.css">
+    <link rel="stylesheet" href="./css/pledgebit.css">
     <link rel="stylesheet" href="./css/person.css">
-    <!-- <link rel="stylesheet" href="./css/pledgebit.css"> -->
+    <link rel="stylesheet" href="./css/pledgebit.css">
     <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
@@ -99,15 +100,45 @@
                         <li class="list-group-item">
                             <form action="" class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="tel" class="control-label col-md-2">昵称:</label>
+                                    <label for="tel" class="control-label col-md-2">手机:</label>
                                     <div class="col-md-3">
                                         <p class="form-control-static" id="tel">15854901002</p>
                                     </div>
                                     <a class="pull-right form-control-static">更换手机号<i class="glyphicon glyphicon-menu-down"></i></a>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-md-offset-2 col-md-3">
-                                        <input type="text" placeholder="输入旧手机验证码">
+                                <div class="hide changeTel">
+                                    <div class="prev">
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-3">
+                                                <input type="text" class="form-control oldTel" placeholder="输入旧手机验证码">
+                                            </div>
+                                            <button class="btn btn-default cancel validate">发送验证码</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-3">
+                                                <button class="btn btn-warning next">下一步</button>
+                                                <button class="btn btn-default cancel">取消</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hide next-1">
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-3">
+                                                <input type="text" class="form-control" placeholder="输入要绑定的新手机号">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-3">
+                                                <input type="text" class="form-control" placeholder="输入新手机号收到的验证码">
+                                            </div>
+                                            <button class="btn btn-default cancel validate">发送验证码</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-3">
+                                                <button class="btn btn-warning">确认绑定</button>
+                                                <button class="btn btn-default cancel">取消</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -117,16 +148,44 @@
                                 <div class="form-group">
                                     <label for="email" class="control-label col-md-2">邮箱:</label>
                                     <div class="col-md-3">
-                                        <p class="form-control-static" id="email">您还没有绑定邮箱</p>
+                                        <p class="form-control-static text-muted" id="email">您还没有绑定邮箱</p>
                                     </div>
-                                    <a class="pull-right form-control-static">绑定邮箱</a>
+                                    <a class="pull-right form-control-static">绑定邮箱<i class="glyphicon glyphicon-menu-down"></i></a>
+                                </div>
+                                <div class="hide">
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-3">
+                                            <input type="email" class="form-control" placeholder="请输入您的邮箱">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-3">
+                                            <input type="text" class="form-control" placeholder="请输入邮箱验证码">
+                                        </div>
+                                        <button class="btn btn-default cancel validate">发送验证码</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-3">
+                                            <button class="btn btn-warning">确认绑定</button>
+                                            <button class="btn btn-default cancel">取消</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-control-static text-muted col-md-offset-2 col-md-3 hide yincang">填写完自动保存</p>
                         </li>
                     </ul>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="credit">
-                    222
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p class="pull-left">您当前信用积分:<span><i>66</i>积分</span></p>
+                            <p class="pull-left col-md-offset-1 gradel">信用等级</p>
+                            <span class="pull-right explain" data-toggle='tooltip' data-placement='bottom' title="使用积分规则">积分说明</span>
+                        </div>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="realName">
                     333
@@ -156,6 +215,42 @@
             e.preventDefault();
             $(this).tab('show');
         })
+        $('#data a').click(function(){
+            $(this).parent().next('div').toggleClass('hide');
+            $('.yincang').toggleClass('hide');
+            var icon  = $(this).children('i');
+            if(icon.hasClass('glyphicon-menu-down')){
+                icon.removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+            }else{
+                icon.removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+            }
+        })
+        $(function () {
+                $('.validate').click(function (e) {
+                    // alert(333);
+                    e.preventDefault();
+                    clearInterval(timer);
+                    var _this = this;
+                    var n = 60;
+                    var timer = setInterval(function () {
+                        n--;
+                        $(_this).text('还有' + n + 's');
+                        $(_this).attr('disabled', 'disabled');
+                        if (n <= 0) {
+                            clearInterval(timer);
+                            $(_this).text('发送验证码');
+                            $(_this).removeAttr('disabled');
+                        }
+                    }, 1000)
+                })
+                $('.next').click(function(e){
+                    e.preventDefault();
+                    if($('.oldTel').val()!==''){
+                        $('.next-1').removeClass('hide').prev('.prev').addClass('hide');
+                    }
+                })
+                $('[data=toggle="tooltip"]').tooltip();
+            })
     </script>
 </body>
 

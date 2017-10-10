@@ -1,3 +1,34 @@
-#data .form-group{
+/* 个人资料 */
+#data .list-group-item:last-child{
+    line-height: 17px;
+    height: 48px;
+}
+#data .form-horizontal .form-group:last-child{
     margin-bottom: 0px;
+}
+#data a{
+    color: #a1a1a1!important;
+}
+#data a:hover,#data a:focus{
+    color: #a1a1a1!important;
+    cursor: pointer;
+}
+/* 信用积分 */
+.gradel{
+    position: relative;
+}
+.gradel::after{
+    content: url('../images/zuanshidengji.png');
+    position: absolute;
+    top: 0px;
+    left: 110%;
+}
+.explain{
+    position: relative;
+}
+.explain::before{
+    position: absolute;
+    left: -23px;
+    top: 2px;
+    content:url('../images/jifenshuoming.png');
 }
