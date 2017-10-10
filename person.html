@@ -181,14 +181,108 @@
                 <div role="tabpanel" class="tab-pane" id="credit">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <p class="pull-left">您当前信用积分:<span><i>66</i>积分</span></p>
-                            <p class="pull-left col-md-offset-1 gradel">信用等级</p>
-                            <span class="pull-right explain" data-toggle='tooltip' data-placement='bottom' title="使用积分规则">积分说明</span>
+                            <p class="pull-left">您当前信用积分:<span class="text-muted"><i class="red-display points">66</i>积分</span></p>
+                            <p class="pull-left col-md-offset-1 gradel" style="line-height:38px;">信用等级</p>
+                            <span style="line-height:38px;" class="pull-right explain" data-toggle='tooltip' data-placement='bottom' title="<p class='text-left'>使用积分规则</p><p class='text-left'>登录3次+1分（当日最多加一次分）</p><p class='text-left'>按时赎回+1分，</p><p class='text-left'>续租一次+2分，</p><p class='text-left'>一次赎回提醒2天内赎回+1分</p><p class='text-left'>一次赎回提醒2天内续租+1分</p><p class='text-left'>一次赎回提醒2天内未赎回-1分</p><p class='text-left'>二次赎回提醒1天内未赎回-1分</p><p class='text-left'>三次赎回提醒-1分</p><p class='text-left'>超时：清零</p><p class='text-left'>信用积分关系到您的抵押额度，请用心维护哦~</p>">积分说明</span>
                         </div>
+                    </div>
+                    <div class="page-header">
+                        <p>信用积分记录</p>
+                    </div>
+                    <div class="table-responsive bgColor">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <td>2017-09-29</td>
+                                    <td>累计登陆3次</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-29</td>
+                                    <td>按时赎回</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-28</td>
+                                    <td>累计登陆3次</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-27</td>
+                                    <td>续租</td>
+                                    <td class="text-danger"><h4>+2</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-26</td>
+                                    <td>首次赎回提醒2天内赎回</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-25</td>
+                                    <td>首次赎回提醒2天内续租</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-24</td>
+                                    <td>首次赎回提醒2天内未赎回</td>
+                                    <td class="text-danger"><h4>-1</h4></td>
+                                    
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-23</td>
+                                    <td>二次赎回提醒1天内未赎回</td>
+                                    <td class="text-danger"><h4>-1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-22</td>
+                                    <td>三次赎回提醒</td>
+                                    <td class="text-danger"><h4>-1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-22</td>
+                                    <td>断租</td>
+                                    <td class="text-danger"><h4>0</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-22</td>
+                                    <td>累计登陆三次</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-21</td>
+                                    <td>累计登陆三次</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                                <tr>
+                                    <td>2017-09-21</td>
+                                    <td>累计登陆三次</td>
+                                    <td class="text-danger"><h4>+1</h4></td>
+                                </tr> 
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="realName">
-                    333
+                    <form action="" class="form-horizontal bgColor occupy2">
+                        <div class="form-group">
+                            <label for="username" class="col-md-2 control-label">姓名:</label>
+                            <div class="col-md-3">
+                                <input type="text" id="username" class="form-control" placeholder="请输入您的真实姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="identity" class="col-md-2 control-label">身份证号:</label>
+                            <div class="col-md-3">
+                                <input type="text" id="identity" class="form-control" placeholder="请输入您的身份证号码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="identityP" class="col-md-2 control-label">身份证照片:</label>
+                            <div class="col-md-3">
+                                <input type="text" id="identityP" class="form-control" placeholder="请输入您的身份证号码">
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="safe">
                     444
@@ -249,7 +343,7 @@
                         $('.next-1').removeClass('hide').prev('.prev').addClass('hide');
                     }
                 })
-                $('[data=toggle="tooltip"]').tooltip();
+                $('[data-toggle="tooltip"]').tooltip({html:true});
             })
     </script>
 </body>

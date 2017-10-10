@@ -20,7 +20,7 @@
 .gradel::after{
     content: url('../images/zuanshidengji.png');
     position: absolute;
-    top: 0px;
+    top: 5px;
     left: 110%;
 }
 .explain{
@@ -31,4 +31,25 @@
     left: -23px;
     top: 2px;
     content:url('../images/jifenshuoming.png');
+}
+.points{
+    font-size: 24px;
+    font-style: normal;
+}
+.page-header{
+    margin: 20px 0px 20px;
+    padding-bottom: 0px;
+}
+.bgColor{
+    background: #fff;
+}
+.bgColor td{
+    text-align: left;
+}
+.bgColor tr td:nth-child(3){
+    text-align: center;
+}
+/* 实名认证 */
+.occupy2{
+    padding-top: 40px;
 }
