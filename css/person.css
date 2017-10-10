@@ -53,3 +53,12 @@
 .occupy2{
     padding-top: 40px;
 }
+#realName .post_upload>div{
+    display: block;
+    position: relative;
+    width: 180px;
+    height: 140px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

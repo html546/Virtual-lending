@@ -278,8 +278,20 @@
                         </div>
                         <div class="form-group">
                             <label for="identityP" class="col-md-2 control-label">身份证照片:</label>
-                            <div class="col-md-3">
-                                <input type="text" id="identityP" class="form-control" placeholder="请输入您的身份证号码">
+                            <div class="col-md-10 post_upload">
+                                <!-- <input type="text" id="identityP" class="form-control" placeholder="请输入您的身份证号码"> -->
+                                <div>
+                                    <img src="../images/shimingrenzheng01.png" alt="" />
+                                    <input type="file" name="img1" value="" class="myfile1" onchange="loadImg1(this)" />
+                                </div>
+                                <div>
+                                    <img src="../images/shimingrenzheng02.png" alt="" />
+                                    <input type="file" name="img2" value="" class="myfile2" onchange="loadImg1(this)" />
+                                </div>
+                                <div>
+                                    <img src="../images/shimingrenzheng03.png" alt="" />
+                                    <input type="file" name="img3" value="" class="myfile3" onchange="loadImg1(this)" />
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -345,6 +357,18 @@
                 })
                 $('[data-toggle="tooltip"]').tooltip({html:true});
             })
+            function loadImg1(obj){
+				var file1 = obj.files[0];
+				var reader = new FileReader();
+				var imgFile;
+				reader.onload=function(e){
+					imgFile = e.target.result;
+					// var divs = $('.post_upload').children('div');
+					$(obj).prev('img').attr('src', imgFile);
+					// divs.eq(0).next('div').show();
+				};
+				reader.readAsDataURL(file1);
+			}
     </script>
 </body>
 
