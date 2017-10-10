@@ -69,13 +69,32 @@
 #safe a:hover,#safe a:focus{
     color: #000!important;
 }
+#safe .panel-heading{
+    background: #fff;
+}
 .editor{
     position: relative;
     right: 30px;
 }
-.editor::after{
+.editor.collapsed::after{
     content:url(../images/xiala1.png);
     position: absolute;
     left: 125%;
     top: 1px;
+}
+.editor::after{
+    content:url(../images/xialazhankai1.png);
+    position: absolute;
+    left: 125%;
+    top: 1px;
+}
+.confirmBtn{
+    padding: 6px 60px;
+}
+/* 官方公告 */
+#notice a{
+    color: #000!important;
+}
+#notice a:hover,#notice a:focus{
+    color: #000!important;
 }
