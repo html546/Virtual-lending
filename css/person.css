@@ -62,3 +62,20 @@
     margin-right: 10px;
     margin-bottom: 10px;
 }
+/* 安全设置 */
+#safe a{
+    color: #000!important;
+}
+#safe a:hover,#safe a:focus{
+    color: #000!important;
+}
+.editor{
+    position: relative;
+    right: 30px;
+}
+.editor::after{
+    content:url(../images/xiala1.png);
+    position: absolute;
+    left: 125%;
+    top: 1px;
+}
