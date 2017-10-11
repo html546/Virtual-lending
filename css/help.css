@@ -1,6 +1,29 @@
+/* 帮助 */
 .bgColor{
     background: #f5f5f5;
 }
 .breadcrumb{
     margin-top: 20px;
+}
+.editor{
+    position: relative;
+    right: 30px;
+}
+.editor.collapsed::after{
+    content:url(../images/xiala1.png);
+    position: absolute;
+    left: 125%;
+    top: 1px;
+}
+.editor::after{
+    content:url(../images/xialazhankai1.png);
+    position: absolute;
+    left: 125%;
+    top: 1px;
+}
+.panel-heading{
+    background: #fff!important;
+}
+.breadcrumb>li+li:before{
+    content:'>>'
 }
