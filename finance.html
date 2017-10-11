@@ -272,7 +272,7 @@
                                     <th>账户概览<span class="gray">(账户余额=可用金额+冻结金额)</span></th>
                                     <th></th>
                                     <th></th>
-                                    <th><a class="text-right" href="#">收支明细</a></th>
+                                    <th><a class="text-right" id="showDetail" href="#">收支明细</a></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -370,6 +370,175 @@
                         </table>
                     </div>
                 </div>
+                <!-- 隐藏的panel -->
+                <div role="tabpanel" class="tab-pane occupy" id="detail">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="return">
+                            <a href="#"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                        </li>
+                        <li role="presentation" class="active">
+                            <a href="#all" aria-controls='all' role="tab" data-toggle="tab">全部收支明细</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#reCharge" aria-controls='reCharge' role="tab" data-toggle="tab">只看充值</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#cash" aria-controls='cash' role="tab" data-toggle="tab">只看提现</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="all">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                账户提现(元)
+                                            </td>
+                                            <td class="red-display">
+                                                -666
+                                            </td>
+                                            <td>
+                                                处理中
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                账户充值(元)
+                                            </td>
+                                            <td class="red-display">
+                                                +555
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                比特币充值(BTC)
+                                            </td>
+                                            <td class="red-display">
+                                                +0.66
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                比特币提现(BTC)
+                                            </td>
+                                            <td class="red-display">
+                                                +0.66
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                莱特币充值(LTC)
+                                            </td>
+                                            <td class="red-display">
+                                                +.03
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                莱特币提现(LTC)
+                                            </td>
+                                            <td class="red-display">
+                                                -0.2
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                账户充值(元)
+                                            </td>
+                                            <td class="red-display">
+                                                +6666
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2017-10-09
+                                            </td>
+                                            <td>
+                                                账户提现(元)
+                                            </td>
+                                            <td class="red-display">
+                                                -55
+                                            </td>
+                                            <td>
+                                                交易成功
+                                            </td>
+                                            <td class="text-warning">
+                                                删除
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="reCharge">
+                            这是充值的内容
+                        </div>
+                        <div class="tab-pane" role="tabpanel" id="cash">
+                            这是提现的内容
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -385,6 +554,22 @@
         $('#my-tab a').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
+        })
+        $('a[href="#finance"]').click(function(){
+            $('#detail').hide();
+        })
+        $('a[href="#wallet"]').click(function(){
+            if($('#wallet').css('display')=='none'){
+                $('#detail').show();
+            }
+        })
+        $('#showDetail').click(function(){
+            $('#detail').show();
+            $('#wallet').css('display','none');
+        })
+        $('.return').click(function(){
+            $('#wallet').show();
+            $('#detail').hide()
         })
     </script>
 </body>

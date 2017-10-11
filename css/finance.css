@@ -82,3 +82,11 @@
 .occupy{
     margin-bottom: 40px;
 }
+/* 隐藏的明细 */
+#detail table{
+    background: #fff;
+}
+#detail table th,#detail table td{
+    text-align:left;
+    vertical-align: middle!important;
+}
