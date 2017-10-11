@@ -13,6 +13,24 @@
     color: #a1a1a1!important;
     cursor: pointer;
 }
+.changeTel2{
+    position: relative;
+    right: 20px;
+}
+.changeTel3{
+    position: relative;
+    right: 20px;
+}
+.changeTel2::after{
+    content:url(../images/xiala1.png);
+    position: absolute;
+    top: 10px;
+}
+.changeTel3::after{
+    content:url(../images/xialazhankai1.png);
+    position: absolute;
+    top: 10px;
+}
 /* 信用积分 */
 .gradel{
     position: relative;

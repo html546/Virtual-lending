@@ -64,6 +64,7 @@
                 <li role="presentation"><a href="#notice" aria-controls="notice" role="tab" data-toggle="tab">官方公告</a></li>
             </ul>
             <div class="tab-content">
+                <!-- 个人资料 -->
                 <div role="tabpanel" class="tab-pane active" id="data">
                     <ul class="list-group">
                         <li class="list-group-item">
@@ -103,7 +104,7 @@
                                     <div class="col-md-3">
                                         <p class="form-control-static" id="tel">15854901002</p>
                                     </div>
-                                    <a class="pull-right form-control-static">更换手机号<i class="glyphicon glyphicon-menu-down"></i></a>
+                                    <a class="pull-right form-control-static changeTel2">更换手机号</a>
                                 </div>
                                 <div class="hide changeTel">
                                     <div class="prev">
@@ -149,7 +150,7 @@
                                     <div class="col-md-3">
                                         <p class="form-control-static text-muted" id="email">您还没有绑定邮箱</p>
                                     </div>
-                                    <a class="pull-right form-control-static">绑定邮箱<i class="glyphicon glyphicon-menu-down"></i></a>
+                                    <a class="pull-right form-control-static changeTel2">绑定邮箱</a>
                                 </div>
                                 <div class="hide">
                                     <div class="form-group">
@@ -177,6 +178,7 @@
                         </li>
                     </ul>
                 </div>
+                <!-- 信用积分 -->
                 <div role="tabpanel" class="tab-pane" id="credit">
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -261,6 +263,7 @@
                         </table>
                     </div>
                 </div>
+                <!-- 实名认证 -->
                 <div role="tabpanel" class="tab-pane" id="realName">
                     <form action="" class="form-horizontal bgColor occupy2">
                         <div class="form-group">
@@ -295,6 +298,7 @@
                         </div>
                     </form>
                 </div>
+                <!-- 安全设置 -->
                 <div role="tabpanel" class="tab-pane" id="safe">
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
@@ -521,9 +525,11 @@
                         </div>
                     </div>
                 </div>
+                <!-- 客服中心 -->
                 <div role="tabpanel" class="tab-pane" id="cservice">
                     555
                 </div>
+                <!-- 官方公告 -->
                 <div role="tabpanel" class="tab-pane" id="notice">
                     <div class="list-group">
                         <a href="#" class="list-group-item">
@@ -592,11 +598,11 @@
         $('#data a').click(function(){
             $(this).parent().next('div').toggleClass('hide');
             $('.yincang').toggleClass('hide');
-            var icon  = $(this).children('i');
-            if(icon.hasClass('glyphicon-menu-down')){
-                icon.removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+            
+            if($(this).hasClass('changeTel2')){
+                $(this).removeClass('changeTel2').addClass('changeTel3');
             }else{
-                icon.removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+                $(this).removeClass('changeTel3').addClass('changeTel2');
             }
         })
         $(function () {
