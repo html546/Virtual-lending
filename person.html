@@ -20,7 +20,7 @@
 
 <body>
     <!-- 导航与背景 -->
-    <div class="container-fulid">
+    <div class="container-fulid firstHead">
         <nav class="navbar navbar-inverse">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -643,6 +643,31 @@
 				};
 				reader.readAsDataURL(file1);
             }
+            window.onload = function(){
+                let allHeight = $(window).height();
+                let topHeight = $('.firstHead').height();
+                let footHeight = $('.base').height();
+                let bgHeight = parseInt(allHeight - topHeight - footHeight);
+                if($('.graybg').height()<bgHeight){
+                    $('.graybg').height(bgHeight);
+                }
+            }
+            /* $('#my-tab li').eq(1).children('a').click(function(){
+                $('.graybg').height('auto');
+            }) */
+            $(function(){
+                let allHeight = $(window).height();
+                let topHeight = $('.firstHead').height();
+                let footHeight = $('.base').height();
+                let bgHeight = parseInt(allHeight - topHeight - footHeight);
+                    $('#my-tab li').click(function(){
+                    if($(this).index()=='1'){
+                        $('.graybg').height('auto');
+                    }else{
+                        $('.graybg').height(bgHeight);
+                    }
+                })
+            })
             
     </script>
 </body>

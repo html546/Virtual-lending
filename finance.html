@@ -19,7 +19,7 @@
 
 <body>
     <!-- 导航与背景 -->
-    <div class="container-fulid">
+    <div class="container-fulid firstHead">
         <nav class="navbar navbar-inverse">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -570,6 +570,19 @@
         $('.return').click(function(){
             $('#wallet').show();
             $('#detail').hide()
+        })
+        $(function(){
+            let allHeight = $(window).height();
+            let topHeight = $('.firstHead').height();
+            let footHeight = $('.base').height();
+            let bgHeight = parseInt(allHeight-topHeight-footHeight);
+            $('#my-tab li').click(function(){
+                if($(this).index()=='1'){
+                    $('.graybg').height(bgHeight);
+                }else{
+                    $('.graybg').height('auto');
+                }
+            })
         })
     </script>
 </body>
