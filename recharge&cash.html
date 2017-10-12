@@ -81,75 +81,77 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" id="cash">
                     <!-- 这是比特币提现的内容 -->
-                    <p>温馨提示:请不要直接提币到ICO的众筹地址，这会导致您无法收取众筹到的数字资产。
-                       提币到合约地址可能会发生合约执行失败，将导致转账失败，资产将退回到平台。
-                       平台会人工处理退回到原账户，处理时间较长，请您谅解。
-                       网络转账费用是不固定的，取决于转账时合约执行需要消耗的算力。
-                       当前平台内为提币支付的Gas Limit为90000，用于执行转账或合约执行。
-                       如果此次交易消耗超过90000 gas，将导致转账失败，资产将退回到平台由人工处理退回到原账户，请您谅解。
-                    </p>
-                    <form action="" class="form-horizontal">
-                        <div class="form-group">
-                            <label for="address" class="col-md-2 control-label">提取地址</label>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control" id="address" placeholder="请输入粘贴正确的比特币地址">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">安全提现地址(该地址提现不再进行短信验证与谷歌验证)
-                                    </label>
+                    <div class="bgColor2">
+                        <p class="col-md-offset-2 occupy" style="padding-right:80px;text-align:justify;">温馨提示:请不要直接提币到ICO的众筹地址，这会导致您无法收取众筹到的数字资产。
+                           提币到合约地址可能会发生合约执行失败，将导致转账失败，资产将退回到平台。
+                           平台会人工处理退回到原账户，处理时间较长，请您谅解。
+                           网络转账费用是不固定的，取决于转账时合约执行需要消耗的算力。
+                           当前平台内为提币支付的Gas Limit为90000，用于执行转账或合约执行。
+                           如果此次交易消耗超过90000 gas，将导致转账失败，资产将退回到平台由人工处理退回到原账户，请您谅解。
+                        </p>
+                        <form action="" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="address" class="col-md-2 control-label">提取地址</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="address" placeholder="请输入粘贴正确的比特币地址">
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="num" class="col-md-2 control-label">数量</label>
-                            <div class="col-md-3">
-                                <input type="number" class="form-control" id="num" placeholder="请输入比特币数量">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">资金密码</label>
-                            <div class="col-md-3">
-                                <div class="col-md-8" style="padding:0px 0px;">
-                                    <input type="password" class="form-control" id="password" placeholder="请输入资金密码">
-                                </div>
-                                <div class="col-md-4">
-                                    <button type="button" class="btn btn-link forget">忘记密码</button>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-3">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">安全提现地址(该地址提现不再进行短信验证与谷歌验证)
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="proving" class="col-md-2 control-label">手机验证</label>
-                            <div class="col-md-3">
-                                <div class="col-md-8" style="padding:0px 0px;">
-                                    <input type="text" class="form-control" id="proving" placeholder="请输入手机短信验证码">
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-default btn-sm cancel validate">获取验证码</button>
+                            <div class="form-group">
+                                <label for="num" class="col-md-2 control-label">数量</label>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="num" placeholder="请输入比特币数量">
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="google" class="col-md-2 control-label">谷歌验证码</label>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control" id="google" placeholder="请输入谷歌验证码">
+                            <div class="form-group">
+                                <label for="password" class="col-md-2 control-label">资金密码</label>
+                                <div class="col-md-3">
+                                    <div class="col-md-8" style="padding:0px 0px;">
+                                        <input type="password" class="form-control" id="password" placeholder="请输入资金密码">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-link forget">忘记密码</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="remark" class="col-md-2 control-label">备注</label>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control" id="remark">
+                            <div class="form-group">
+                                <label for="proving" class="col-md-2 control-label">手机验证</label>
+                                <div class="col-md-3">
+                                    <div class="col-md-8" style="padding:0px 0px;">
+                                        <input type="text" class="form-control" id="proving" placeholder="请输入手机短信验证码">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button class="btn btn-default btn-sm cancel validate">获取验证码</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-3">
-                                <button type="submit" class="btn btn-warning sure">确定</button>
+                            <div class="form-group">
+                                <label for="google" class="col-md-2 control-label">谷歌验证码</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="google" placeholder="请输入谷歌验证码">
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                            <div class="form-group">
+                                <label for="remark" class="col-md-2 control-label">备注</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="remark">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-3">
+                                    <button type="submit" class="btn btn-warning sure">确定</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
