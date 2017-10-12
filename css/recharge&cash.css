@@ -1,0 +1,24 @@
+#reCharge .panel-default>.panel-heading{
+    background: #fff!important;
+}
+.bgColor{
+    background: #fff;
+    padding: 240px 0px 300px;
+}
+.forget{
+    color: #66512c;
+}
+.forget:focus, .forget:hover{
+    color: #66512c;
+}
+.sure{
+    padding: 6px 60px;
+}
+.cancel {
+    border: 1px solid #c6b07f;
+    color: #c5b17c;
+}
+.cancel:hover,.cancel:focus{
+    border: 1px solid #c6b07f;
+    color: #c5b17c;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的抵押</title>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/finance.css">
+    <link rel="stylesheet" href="./css/recharge&cash.css">
+    <!-- <link rel="stylesheet" href="./css/pledgebit.css"> -->
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 导航与背景 -->
+    <div class="container-fulid">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                    <a class="navbar-brand" href="#">LOGO果粒多数字商品抵押</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./index.html">首页</a></li>
+                        <li><a href="./finance.html">我要赎回</a></li>
+                        <li><a class="active" href="./finance.html">财务中心</a></li>
+                        <li><a href="./person.html">个人中心</a></li>
+                        <li><a href="./login.html" class="entry">登录</a></li>
+                        <li><a href="./register.html" class="register">注册</a></li>
+                        <li><a href="#" class="notice">公告</a></li>
+                        <li><a href="./help.html" class="help">帮助</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- 我的抵押详情 -->
+    <div class="container-fulid graybg">
+        <div class="container">
+            <ul class="nav nav-tabs" id="my-tab" role="tablist">
+                <li role="presentation" class="active"><a href="#reCharge" aria-controls="reCharge" role="tab" data-toggle="tab">比特币充值</a></li>
+                <li role="presentation"><a href="#cash" aria-controls="cash" role="tab" data-toggle="tab">比特币提现</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active bgColor" id="reCharge">
+                    <!-- 这是比特币充值的内容 -->
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5 class="text-center">接收地址：<span class="text-warning" style="margin-right:20px;">1A2S3D4F5G6H7J8K9L1A2S3D4F</span><a class="btn btn-warning" href="#" role="button">更新</a></h5>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-body">
+                                <p>温馨提示:</p>
+                                <p> 您充值比特币上述地址后，需要整个比特币网络节点的确认，为了快速到账，您可以向比特币网络支付少量的手续费。到账时间为1次网络确认后（一般是10分钟-60分钟之间）。
+                                        最小充值金额是：0.0001 您的比特币地址不会经常改变，可以重复充值；如有更改，我们会尽量通过网站公告或邮件通知您。
+                                        如果您有疑问，请 查看比特币充值流程图示 或 联系客服
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="cash">
+                    <!-- 这是比特币提现的内容 -->
+                    <p>温馨提示:请不要直接提币到ICO的众筹地址，这会导致您无法收取众筹到的数字资产。
+                       提币到合约地址可能会发生合约执行失败，将导致转账失败，资产将退回到平台。
+                       平台会人工处理退回到原账户，处理时间较长，请您谅解。
+                       网络转账费用是不固定的，取决于转账时合约执行需要消耗的算力。
+                       当前平台内为提币支付的Gas Limit为90000，用于执行转账或合约执行。
+                       如果此次交易消耗超过90000 gas，将导致转账失败，资产将退回到平台由人工处理退回到原账户，请您谅解。
+                    </p>
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="address" class="col-md-2 control-label">提取地址</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="address" placeholder="请输入粘贴正确的比特币地址">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-3">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">安全提现地址(该地址提现不再进行短信验证与谷歌验证)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="num" class="col-md-2 control-label">数量</label>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="num" placeholder="请输入比特币数量">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-2 control-label">资金密码</label>
+                            <div class="col-md-3">
+                                <div class="col-md-8" style="padding:0px 0px;">
+                                    <input type="password" class="form-control" id="password" placeholder="请输入资金密码">
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-link forget">忘记密码</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="proving" class="col-md-2 control-label">手机验证</label>
+                            <div class="col-md-3">
+                                <div class="col-md-8" style="padding:0px 0px;">
+                                    <input type="text" class="form-control" id="proving" placeholder="请输入手机短信验证码">
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn-sm cancel validate">获取验证码</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="google" class="col-md-2 control-label">谷歌验证码</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="google" placeholder="请输入谷歌验证码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="remark" class="col-md-2 control-label">备注</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="remark">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-3">
+                                <button type="submit" class="btn btn-warning sure">确定</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="base container-fulid">
+        <div class="container">
+            <p class="qq pull-left">QQ群: <span>66666666</span> </p>
+            <p class="email pull-left hidden-xs">邮箱: <span>guolicheng@163.com</span></p>
+            <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
+        </div>
+    </div>
+    <script>
+        $('.validate').click(function (e) {
+                e.preventDefault();
+                clearInterval(timer);
+                var _this = this;
+                var n = 60;
+                var timer = setInterval(function () {
+                    n--;
+                    $(_this).text('还有' + n + 's');
+                    $(_this).attr('disabled', 'disabled');
+                    if (n <= 0) {
+                        clearInterval(timer);
+                        $(_this).text('发送验证码');
+                        $(_this).removeAttr('disabled');
+                    }
+                }, 1000)
+            })
+    </script>
+</body>
+
+</html>
