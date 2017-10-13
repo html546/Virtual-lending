@@ -152,7 +152,7 @@
                                     </div>
                                     <a class="pull-right form-control-static changeTel2">绑定邮箱</a>
                                 </div>
-                                <div class="hide">
+                                <div class="hide changeTel">
                                     <div class="form-group">
                                         <div class="col-md-offset-2 col-md-3">
                                             <input type="email" class="form-control" placeholder="请输入您的邮箱">
@@ -597,7 +597,10 @@
         })
         $('#data a').click(function(){
             $(this).parent().next('div').toggleClass('hide');
-            $('.yincang').toggleClass('hide');
+            // $('.yincang').toggleClass('hide');
+            if(!$('.prev').hasClass('.changeTel')){
+                $('.yincang').removeClass('hide');
+            }
             
             if($(this).hasClass('changeTel2')){
                 $(this).removeClass('changeTel2').addClass('changeTel3');
@@ -652,9 +655,7 @@
                     $('.graybg').height(bgHeight);
                 }
             }
-            /* $('#my-tab li').eq(1).children('a').click(function(){
-                $('.graybg').height('auto');
-            }) */
+            
             $(function(){
                 let allHeight = $(window).height();
                 let topHeight = $('.firstHead').height();
