@@ -2,157 +2,192 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/pledgebit.css">
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/pledgebit.css">
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- 导航与背景 -->
-  <div class="container-fulid">
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-            aria-expanded="false">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-          <a class="navbar-brand" href="#">LOGO果粒多数字商品抵押</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a class="active" href="./index.html">首页</a></li>
-            <li><a href="./finance.html">我要赎回</a></li>
-            <li><a href="./finance.html">财务中心</a></li>
-            <li><a href="./person.html">个人中心</a></li>
-            <li><a href="./login.html" class="entry">登录</a></li>
-            <li><a href="./register.html" class="register">注册</a></li>
-            <li><a href="#" class="notice">公告</a></li>
-            <li><a href="./help.html" class="help">帮助</a></li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-  </div>
-  <!-- 抵押信息 -->
-  <div class="container-fulid bit-pledge">
-      <div class="container" style="background:#fff;padding:0px;">
-        <!-- 面包屑 -->
-        <ol class="breadcrumb">
-            <li><a href="#">您当前位置:首页</a></li>
-            <li><a href="#" class="active2">商品抵押/比特币</a></li>
-        </ol>
-        <!-- 抵押状态栏 -->
-        <div class="state">
-            <div class="pledge-message pull-left active4">
-                <div class="circle  pull-left">1</div>
-                <p class="pull-left">抵押信息</p>
-                <p class="pull-left hidden-xs">——————</p>
+    <!-- 导航与背景 -->
+    <div class="container-fulid">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="">
+                        <span>果粒多数字商品抵押</span>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="active" href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">我要赎回</a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">财务中心</a>
+                        </li>
+                        <li>
+                            <a href="./person.html">个人中心</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" class="entry">登录</a>
+                        </li>
+                        <li>
+                            <a href="./register.html" class="register">注册</a>
+                        </li>
+                        <li>
+                            <a href="#" class="notice">公告</a>
+                        </li>
+                        <li>
+                            <a href="./help.html" class="help">帮助</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <div class="pledge-message pull-left active4">
-                <div class="circle pull-left">2</div>
-                <p class="pull-left">审核中</p>
-                <p class="pull-left hidden-xs">——————————</p>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- 抵押信息 -->
+    <div class="container-fulid bit-pledge">
+        <div class="container" style="background:#fff;padding:0px;">
+            <!-- 面包屑 -->
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">您当前位置:首页</a>
+                </li>
+                <li>
+                    <a href="#" class="active2">商品抵押/比特币</a>
+                </li>
+            </ol>
+            <!-- 抵押状态栏 -->
+            <div class="state">
+                <div class="pledge-message pull-left active4">
+                    <div class="circle  pull-left">1</div>
+                    <p class="pull-left">抵押信息</p>
+                    <p class="pull-left hidden-xs">——————</p>
+                </div>
+                <div class="pledge-message pull-left active4">
+                    <div class="circle pull-left">2</div>
+                    <p class="pull-left">审核中</p>
+                    <p class="pull-left hidden-xs">——————————</p>
+                </div>
+                <div class="pledge-message pull-left active4">
+                    <div class="circle pull-left">3</div>
+                    <p class="pull-left">审核通过已放款</p>
+                    <p class="pull-left hidden-xs">———</p>
+                </div>
+                <div class="pledge-message pull-left">
+                    <div class="circle pull-left">4</div>
+                    <p class="pull-left">已赎回</p>
+                </div>
             </div>
-            <div class="pledge-message pull-left active4">
-                <div class="circle pull-left">3</div>
-                <p class="pull-left">审核通过已放款</p>
-                <p class="pull-left hidden-xs">———</p>
-            </div>
-            <div class="pledge-message pull-left">
-                <div class="circle pull-left">4</div>
-                <p class="pull-left">已赎回</p>
-            </div>
-        </div>
-        <div class="hr-line-dashed"></div>
-        <!-- 抵押详情表单 -->
-        <div class="pledge-detail">
-            <form action="" class="form-horizontal">
-                <div class="form-group">
-                    <label for="cycle" class="control-label col-md-2">抵押周期 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray">30天</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">抵押利率 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray">0.4%</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">抵押额度 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray">50%</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">抵押数量 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray"><span class="red-display">0.666BTB</span></p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">抵押金额 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray"><span class="red-display">￥60000</span></p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">合计抵押利息 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray"><span>￥666</span></p>
-                    </div>
-                </div>
-                <div class="form-group occupy">
-                    <label class="col-md-2 control-label">到期赎回金额 : </label>
-                    <div class="col-md-3">
-                        <p class="form-control-static gray"><span>￥60666</span></p>
-                    </div>
-                </div>
-                
-                <div class="form-group occupy">
-                     <p class="text-left col-md-offset-1 text-warning pull-left occupy-p">您提交的审核已通过，抵押款已发放到您的平台钱包</p>
-                     <button class="btn btn-default btn-warning">去提现</button>
-                </div>
-            </form>
             <div class="hr-line-dashed"></div>
-            <div class="note">
-                <h4>抵押须知</h4>
-                <ul>
-                    <li>1、抵押须知详细内容-----------------------------</li>
-                    <li>2、抵押须知详细内容抵押须知详细内容抵押须知详细内容---------------------------------</li>
-                    <li>3、抵押须知详细内容抵押须知详细内容---------------------------</li>
-                    <li>4、-----------------------------</li>
-                    <li>5、--------------------------------------------</li>
-                </ul>
+            <!-- 抵押详情表单 -->
+            <div class="pledge-detail">
+                <form action="" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="cycle" class="control-label col-md-2">抵押周期 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">30天</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">抵押利率 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">0.4%</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">抵押额度 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">50%</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">抵押数量 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">
+                                <span class="red-display">0.666BTB</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">抵押金额 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">
+                                <span class="red-display">￥60000</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">合计抵押利息 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">
+                                <span>￥666</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group occupy">
+                        <label class="col-md-2 control-label">到期赎回金额 : </label>
+                        <div class="col-md-3">
+                            <p class="form-control-static gray">
+                                <span>￥60666</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group occupy">
+                        <p class="text-left col-md-offset-1 text-warning pull-left occupy-p">您提交的审核已通过，抵押款已发放到您的平台钱包</p>
+                        <button class="btn btn-default btn-warning">去提现</button>
+                    </div>
+                </form>
+                <div class="hr-line-dashed"></div>
+                <div class="note">
+                    <h4>抵押须知</h4>
+                    <ul>
+                        <li>1、抵押须知详细内容-----------------------------</li>
+                        <li>2、抵押须知详细内容抵押须知详细内容抵押须知详细内容---------------------------------</li>
+                        <li>3、抵押须知详细内容抵押须知详细内容---------------------------</li>
+                        <li>4、-----------------------------</li>
+                        <li>5、--------------------------------------------</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-  </div>
-  <!-- footer -->
-  <div class="base container-fulid">
-      <div class="container">
-          <p class="qq pull-left">QQ群: <span>66666666</span> </p>
-          <p class="email pull-left hidden-xs">邮箱: <span>guolicheng@163.com</span></p>
-          <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
-      </div>
-  </div>
+    <!-- footer -->
+    <div class="base container-fulid">
+        <div class="container">
+            <p class="qq pull-left">QQ群:
+                <span>66666666</span>
+            </p>
+            <p class="email pull-left hidden-xs">邮箱:
+                <span>guolicheng@163.com</span>
+            </p>
+            <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
+        </div>
+    </div>
 </body>
 
 </html>

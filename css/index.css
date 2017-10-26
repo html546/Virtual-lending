@@ -31,6 +31,10 @@ a:focus,a:hover{
 .navbar-brand,.navbar-nav>li>a{
     line-height: 50px;
 }
+.navbar-brand img{
+    display: inline-block;
+    margin-top: -6px;
+}
 .navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a{
     color: #fff;
 }
@@ -199,14 +203,14 @@ a:focus,a:hover{
         margin-left: 1%;
         margin-bottom: 1%;
     }
-    .navbar>.container .navbar-brand{
-        font-size: 24px;
-    }
     .games .row>div{
         margin-bottom: 100px;
     }
     .navbar-brand,.navbar-nav>li>a{
         line-height: 50px;
+    }
+    .navbar>.container .navbar-brand{
+        font-size: 22px;
     }
 }
 .col-xs-12{

@@ -27,24 +27,43 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                         aria-expanded="false">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                    <a class="navbar-brand" href="#">LOGO果粒多数字商品抵押</a>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="">
+                        <span>果粒多数字商品抵押</span>
+                    </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./index.html">首页</a></li>
-                        <li><a href="./finance.html">我要赎回</a></li>
-                        <li><a href="./finance.html">财务中心</a></li>
-                        <li><a class="active" href="./person.html">个人中心</a></li>
-                        <li><a href="./login.html" class="entry">登录</a></li>
-                        <li><a href="./register.html" class="register">注册</a></li>
-                        <li><a href="#" class="notice">公告</a></li>
-                        <li><a href="./help.html" class="help">帮助</a></li>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">我要赎回</a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">财务中心</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./person.html">个人中心</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" class="entry">登录</a>
+                        </li>
+                        <li>
+                            <a href="./register.html" class="register">注册</a>
+                        </li>
+                        <li>
+                            <a href="#" class="notice">公告</a>
+                        </li>
+                        <li>
+                            <a href="./help.html" class="help">帮助</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -56,12 +75,24 @@
     <div class="container-fulid graybg">
         <div class="container">
             <ul class="nav nav-tabs" id="my-tab" role="tablist">
-                <li role="presentation" class="active"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">个人资料</a></li>
-                <li role="presentation"><a href="#credit" aria-controls="credit" role="tab" data-toggle="tab">信用积分</a></li>
-                <li role="presentation"><a href="#realName" aria-controls="realName" role="tab" data-toggle="tab">实名认证</a></li>
-                <li role="presentation"><a href="#safe" aria-controls="safe" role="tab" data-toggle="tab">安全设置</a></li>
-                <li role="presentation"><a href="#cservice" aria-controls="cservice" role="tab" data-toggle="tab">客服中心</a></li>
-                <li role="presentation"><a href="#notice" aria-controls="notice" role="tab" data-toggle="tab">官方公告</a></li>
+                <li role="presentation" class="active">
+                    <a href="#data" aria-controls="data" role="tab" data-toggle="tab">个人资料</a>
+                </li>
+                <li role="presentation">
+                    <a href="#credit" aria-controls="credit" role="tab" data-toggle="tab">信用积分</a>
+                </li>
+                <li role="presentation">
+                    <a href="#realName" aria-controls="realName" role="tab" data-toggle="tab">实名认证</a>
+                </li>
+                <li role="presentation">
+                    <a href="#safe" aria-controls="safe" role="tab" data-toggle="tab">安全设置</a>
+                </li>
+                <li role="presentation">
+                    <a href="#cservice" aria-controls="cservice" role="tab" data-toggle="tab">客服中心</a>
+                </li>
+                <li role="presentation">
+                    <a href="#notice" aria-controls="notice" role="tab" data-toggle="tab">官方公告</a>
+                </li>
             </ul>
             <div class="tab-content">
                 <!-- 个人资料 -->
@@ -182,7 +213,10 @@
                 <div role="tabpanel" class="tab-pane" id="credit">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <p class="pull-left">您当前信用积分:<span class="text-muted"><i class="red-display points">66</i>积分</span></p>
+                            <p class="pull-left">您当前信用积分:
+                                <span class="text-muted">
+                                    <i class="red-display points">66</i>积分</span>
+                            </p>
                             <p class="pull-left col-md-offset-1 gradel" style="line-height:38px;">信用等级</p>
                             <span style="line-height:38px;" class="pull-right explain" data-toggle='tooltip' data-placement='bottom' title="<p class='text-left'>使用积分规则</p><p class='text-left'>登录3次+1分（当日最多加一次分）</p><p class='text-left'>按时赎回+1分，</p><p class='text-left'>续租一次+2分，</p><p class='text-left'>一次赎回提醒2天内赎回+1分</p><p class='text-left'>一次赎回提醒2天内续租+1分</p><p class='text-left'>一次赎回提醒2天内未赎回-1分</p><p class='text-left'>二次赎回提醒1天内未赎回-1分</p><p class='text-left'>三次赎回提醒-1分</p><p class='text-left'>超时：清零</p><p class='text-left'>信用积分关系到您的抵押额度，请用心维护哦~</p>">积分说明</span>
                         </div>
@@ -196,69 +230,95 @@
                                 <tr>
                                     <td>2017-09-29</td>
                                     <td>累计登陆3次</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-29</td>
                                     <td>按时赎回</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-28</td>
                                     <td>累计登陆3次</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-27</td>
                                     <td>续租</td>
-                                    <td class="text-danger"><h4>+2</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+2</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-26</td>
                                     <td>首次赎回提醒2天内赎回</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-25</td>
                                     <td>首次赎回提醒2天内续租</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-24</td>
                                     <td>首次赎回提醒2天内未赎回</td>
-                                    <td class="text-danger"><h4>-1</h4></td>
-                                    
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>-1</h4>
+                                    </td>
+
+                                </tr>
                                 <tr>
                                     <td>2017-09-23</td>
                                     <td>二次赎回提醒1天内未赎回</td>
-                                    <td class="text-danger"><h4>-1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>-1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-22</td>
                                     <td>三次赎回提醒</td>
-                                    <td class="text-danger"><h4>-1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>-1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-22</td>
                                     <td>断租</td>
-                                    <td class="text-danger"><h4>0</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>0</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-22</td>
                                     <td>累计登陆三次</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-21</td>
                                     <td>累计登陆三次</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>2017-09-21</td>
                                     <td>累计登陆三次</td>
-                                    <td class="text-danger"><h4>+1</h4></td>
-                                </tr> 
+                                    <td class="text-danger">
+                                        <h4>+1</h4>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -306,7 +366,7 @@
                                 <h4 class="panel-title">
                                     <p class="pull-left">修改登录密码</p>
                                     <a class="pull-right editor" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                         编辑
+                                        编辑
                                     </a>
                                     <div class="clearfix"></div>
                                 </h4>
@@ -315,19 +375,22 @@
                                 <div class="panel-body">
                                     <form action="" class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="oldPass" class="col-md-2 control-label"><span class="red-display">*</span>原密码 ：</label>
+                                            <label for="oldPass" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>原密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="password" class="form-control" id="oldPass" placeholder="请输入原密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="newPass" class="col-md-2 control-label"><span class="red-display">*</span>新密码 ：</label>
+                                            <label for="newPass" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>新密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="password" class="form-control" id="newPass" placeholder="请输入新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="confirm" class="col-md-2 control-label"><span class="red-display">*</span>确认密码 ：</label>
+                                            <label for="confirm" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>确认密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="password" class="form-control" id="confirm" placeholder="请再次输入新密码">
                                             </div>
@@ -346,7 +409,7 @@
                                 <h4 class="panel-title">
                                     <p class="pull-left">找回登录密码</p>
                                     <a class="pull-right editor" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                       编辑
+                                        编辑
                                     </a>
                                     <div class="clearfix"></div>
                                 </h4>
@@ -355,28 +418,31 @@
                                 <div class="panel-body">
                                     <div class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="proving" class="col-md-2 control-label"><span class="red-display">*</span>验证码 ：</label>
+                                            <label for="proving" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>验证码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="text" class="form-control" id="proving" placeholder="请输入手机验证码">
                                             </div>
                                             <button class="btn btn-default cancel validate">获取验证码</button>
                                         </div>
                                         <div class="form-group">
-                                            <label for="newPass2" class="col-md-2 control-label"><span class="red-display">*</span>新密码 ：</label>
+                                            <label for="newPass2" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>新密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="text" class="form-control" id="newPass2" placeholder="请输入新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="confirm2" class="col-md-2 control-label"><span class="red-display">*</span>确认密码 ：</label>
+                                            <label for="confirm2" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>确认密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="text" class="form-control" id="confirm2" placeholder="请再次输入新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                                <div class="col-md-offset-2 col-md-3">
-                                                    <button type="submit" class="btn btn-warning confirmBtn">确定</button>
-                                                </div>
+                                            <div class="col-md-offset-2 col-md-3">
+                                                <button type="submit" class="btn btn-warning confirmBtn">确定</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -387,7 +453,7 @@
                                 <h4 class="panel-title">
                                     <p class="pull-left">修改交易密码</p>
                                     <a class="pull-right editor" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                             编辑
+                                        编辑
                                     </a>
                                     <div class="clearfix"></div>
                                 </h4>
@@ -396,19 +462,22 @@
                                 <div class="panel-body">
                                     <form action="" class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="oldPass2" class="col-md-2 control-label"><span class="red-display">*</span>原密码 ：</label>
+                                            <label for="oldPass2" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>原密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="password" class="form-control" id="oldPass2" placeholder="请输入原密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="newPass3" class="col-md-2 control-label"><span class="red-display">*</span>新密码 ：</label>
+                                            <label for="newPass3" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>新密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="password" class="form-control" id="newPass3" placeholder="请输入新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="confirm3" class="col-md-2 control-label"><span class="red-display">*</span>确认密码 ：</label>
+                                            <label for="confirm3" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>确认密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="password" class="form-control" id="confirm3" placeholder="请再次输入新密码">
                                             </div>
@@ -427,7 +496,7 @@
                                 <h4 class="panel-title">
                                     <p class="pull-left">找回交易密码</p>
                                     <a class="pull-right editor" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                             编辑
+                                        编辑
                                     </a>
                                     <div class="clearfix"></div>
                                 </h4>
@@ -436,20 +505,23 @@
                                 <div class="panel-body">
                                     <div class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="proving" class="col-md-2 control-label"><span class="red-display">*</span>验证码 ：</label>
+                                            <label for="proving" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>验证码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="text" class="form-control" id="proving" placeholder="请输入手机验证码">
                                             </div>
                                             <button class="btn btn-default cancel validate">获取验证码</button>
                                         </div>
                                         <div class="form-group">
-                                            <label for="newPass4" class="col-md-2 control-label"><span class="red-display">*</span>新密码 ：</label>
+                                            <label for="newPass4" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>新密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="text" class="form-control" id="newPass4" placeholder="请输入新密码">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="confirm4" class="col-md-2 control-label"><span class="red-display">*</span>确认密码 ：</label>
+                                            <label for="confirm4" class="col-md-2 control-label">
+                                                <span class="red-display">*</span>确认密码 ：</label>
                                             <div class="col-md-3">
                                                 <input type="text" class="form-control" id="confirm4" placeholder="请再次输入新密码">
                                             </div>
@@ -468,7 +540,7 @@
                                 <h4 class="panel-title">
                                     <p class="pull-left">谷歌验证器更改/绑定</p>
                                     <a class="pull-right editor" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-                                             编辑
+                                        编辑
                                     </a>
                                     <div class="clearfix"></div>
                                 </h4>
@@ -512,7 +584,7 @@
                                 <h4 class="panel-title">
                                     <p class="pull-left">绑定银行卡</p>
                                     <a class="pull-right editor" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
-                                             编辑
+                                        编辑
                                     </a>
                                     <div class="clearfix"></div>
                                 </h4>
@@ -543,8 +615,7 @@
                             <p class="list-group-item-text pull-left text-muted">2017-09-28&nbsp;&nbsp;</p>
                             <div class="text-center">
                                 <p class="list-group-item-text text-left">
-                                    消息详细内容，后台发布，随便写点什么代替一下，只有一行展示的内容就这样一行展示,一行展示不开的话就这样换行展示
-                                    消息详细内容，后台发布，随便写点什么代替一下，只有一行展示的内容就这样一行展示,一行展示不开的话就这样换行展示
+                                    消息详细内容，后台发布，随便写点什么代替一下，只有一行展示的内容就这样一行展示,一行展示不开的话就这样换行展示 消息详细内容，后台发布，随便写点什么代替一下，只有一行展示的内容就这样一行展示,一行展示不开的话就这样换行展示
                                 </p>
                             </div>
                             <div class="clearfix"></div>
@@ -585,8 +656,12 @@
     <!-- footer -->
     <div class="base container-fulid">
         <div class="container">
-            <p class="qq pull-left">QQ群: <span>66666666</span> </p>
-            <p class="email pull-left hidden-xs">邮箱: <span>guolicheng@163.com</span></p>
+            <p class="qq pull-left">QQ群:
+                <span>66666666</span>
+            </p>
+            <p class="email pull-left hidden-xs">邮箱:
+                <span>guolicheng@163.com</span>
+            </p>
             <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
         </div>
     </div>
@@ -595,81 +670,81 @@
             e.preventDefault();
             $(this).tab('show');
         })
-        $('#data a').click(function(){
+        $('#data a').click(function () {
             $(this).parent().next('div').toggleClass('hide');
             // $('.yincang').toggleClass('hide');
-            if(!$('.prev').hasClass('.changeTel')){
+            if (!$('.prev').hasClass('.changeTel')) {
                 $('.yincang').removeClass('hide');
             }
-            
-            if($(this).hasClass('changeTel2')){
+
+            if ($(this).hasClass('changeTel2')) {
                 $(this).removeClass('changeTel2').addClass('changeTel3');
-            }else{
+            } else {
                 $(this).removeClass('changeTel3').addClass('changeTel2');
             }
         })
         $(function () {
-                $('.validate').click(function (e) {
-                    // alert(333);
-                    e.preventDefault();
-                    clearInterval(timer);
-                    var _this = this;
-                    var n = 60;
-                    var timer = setInterval(function () {
-                        n--;
-                        $(_this).text('还有' + n + 's');
-                        $(_this).attr('disabled', 'disabled');
-                        if (n <= 0) {
-                            clearInterval(timer);
-                            $(_this).text('发送验证码');
-                            $(_this).removeAttr('disabled');
-                        }
-                    }, 1000)
-                })
-                $('.next').click(function(e){
-                    e.preventDefault();
-                    if($('.oldTel').val()!==''){
-                        $('.next-1').removeClass('hide').prev('.prev').addClass('hide');
+            $('.validate').click(function (e) {
+                // alert(333);
+                e.preventDefault();
+                clearInterval(timer);
+                var _this = this;
+                var n = 60;
+                var timer = setInterval(function () {
+                    n--;
+                    $(_this).text('还有' + n + 's');
+                    $(_this).attr('disabled', 'disabled');
+                    if (n <= 0) {
+                        clearInterval(timer);
+                        $(_this).text('发送验证码');
+                        $(_this).removeAttr('disabled');
                     }
-                })
-                $('[data-toggle="tooltip"]').tooltip({html:true});
+                }, 1000)
             })
-            function loadImg1(obj){
-				var file1 = obj.files[0];
-				var reader = new FileReader();
-				var imgFile;
-				reader.onload=function(e){
-					imgFile = e.target.result;
-					// var divs = $('.post_upload').children('div');
-					$(obj).prev('img').attr('src', imgFile);
-					// divs.eq(0).next('div').show();
-				};
-				reader.readAsDataURL(file1);
+            $('.next').click(function (e) {
+                e.preventDefault();
+                if ($('.oldTel').val() !== '') {
+                    $('.next-1').removeClass('hide').prev('.prev').addClass('hide');
+                }
+            })
+            $('[data-toggle="tooltip"]').tooltip({ html: true });
+        })
+        function loadImg1(obj) {
+            var file1 = obj.files[0];
+            var reader = new FileReader();
+            var imgFile;
+            reader.onload = function (e) {
+                imgFile = e.target.result;
+                // var divs = $('.post_upload').children('div');
+                $(obj).prev('img').attr('src', imgFile);
+                // divs.eq(0).next('div').show();
+            };
+            reader.readAsDataURL(file1);
+        }
+        window.onload = function () {
+            let allHeight = $(window).height();
+            let topHeight = $('.firstHead').height();
+            let footHeight = $('.base').height();
+            let bgHeight = parseInt(allHeight - topHeight - footHeight);
+            if ($('.graybg').height() < bgHeight) {
+                $('.graybg').height(bgHeight);
             }
-            window.onload = function(){
-                let allHeight = $(window).height();
-                let topHeight = $('.firstHead').height();
-                let footHeight = $('.base').height();
-                let bgHeight = parseInt(allHeight - topHeight - footHeight);
-                if($('.graybg').height()<bgHeight){
+        }
+
+        $(function () {
+            let allHeight = $(window).height();
+            let topHeight = $('.firstHead').height();
+            let footHeight = $('.base').height();
+            let bgHeight = parseInt(allHeight - topHeight - footHeight);
+            $('#my-tab li').click(function () {
+                if ($(this).index() == '1') {
+                    $('.graybg').height('auto');
+                } else {
                     $('.graybg').height(bgHeight);
                 }
-            }
-            
-            $(function(){
-                let allHeight = $(window).height();
-                let topHeight = $('.firstHead').height();
-                let footHeight = $('.base').height();
-                let bgHeight = parseInt(allHeight - topHeight - footHeight);
-                    $('#my-tab li').click(function(){
-                    if($(this).index()=='1'){
-                        $('.graybg').height('auto');
-                    }else{
-                        $('.graybg').height(bgHeight);
-                    }
-                })
             })
-            
+        })
+
     </script>
 </body>
 
