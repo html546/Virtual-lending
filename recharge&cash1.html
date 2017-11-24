@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账户充值和提现申请</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/finance.css">
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 导航与背景 -->
+    <div class="container-fulid firstHead">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="">
+                        <span>果粒多数字商品抵押</span>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./finance.html">我要赎回</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./finance.html">财务中心</a>
+                        </li>
+                        <li>
+                            <a href="./person.html">个人中心</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" class="entry">登录</a>
+                        </li>
+                        <li>
+                            <a href="./register.html" class="register">注册</a>
+                        </li>
+                        <li>
+                            <a href="#" class="notice">公告</a>
+                        </li>
+                        <li>
+                            <a href="./help.html" class="help">帮助</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- footer -->
+    <div class="base container-fulid">
+        <div class="container">
+            <p class="qq pull-left">QQ群:
+                <span>66666666</span>
+            </p>
+            <p class="email pull-left hidden-xs">邮箱:
+                <span>guolicheng@163.com</span>
+            </p>
+            <p class="copyright pull-right hidden-xs hidden-sm">虚拟物品抵押平台 copyright @ 2017 - 2020 xuniwupindiya.All Rights Reserved版权所有</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            let allHeight = $(window).height();
+            let topHeight = $('.firstHead').height();
+            let footHeight = $('.base').height();
+            let bgHeight = parseInt(allHeight - topHeight - footHeight);
+            $('#my-tab li').click(function () {
+                if ($(this).index() == '1') {
+                    $('.graybg').height(bgHeight);
+                } else {
+                    $('.graybg').height('auto');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

@@ -256,10 +256,10 @@
     <script>
         countdown.setLabels(
             ' 毫秒| 秒| 分| 时| 日| semana| 月| ano| década| século| milênio',
-            ' 毫秒| 秒| 分| 时| 日| semanas| meses| anos| décadas| séculos| milênios',
+            ' 毫秒| 秒| 分| 时| 日| semanas| 月| anos| décadas| séculos| milênios',
             ' , ');
         var clock = document.getElementById('countdown-holder')
-            , targetDate = new Date(2017, 09, 12);
+            , targetDate = new Date(2017, 10, 25);
         clock.innerHTML = countdown(targetDate).toString();
         setInterval(function () {
             clock.innerHTML = countdown(targetDate).toString();
