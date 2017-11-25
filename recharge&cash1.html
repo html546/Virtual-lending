@@ -18,7 +18,8 @@
             background: #fff;
             padding: 60px 0px 280px;
         }
-        .bank{
+
+        .bank {
             height: 60px;
             width: 200px;
             text-align: center;
@@ -30,41 +31,80 @@
             margin-right: 30px;
             margin-bottom: 30px;
         }
-        .industry{
+
+        .industry {
             background-image: url(./images/industry.png);
         }
-        .farming{
+
+        .farming {
             background-image: url(./images/farming.png);
         }
-        .build{
+
+        .build {
             background-image: url(./images/build.png);
         }
-        .china{
+
+        .china {
             background-image: url(./images/china.png);
         }
-        .post{
+
+        .post {
             background-image: url(./images/post.png);
         }
-        .business{
+
+        .business {
             background-image: url(./images/business.png);
         }
-        .livehood{
+
+        .livehood {
             background-image: url(./images/livehood.png);
         }
-        .traffic{
+
+        .traffic {
             background-image: url(./images/traffic.png);
         }
-        .safety{
+
+        .safety {
             background-image: url(./images/safety.png);
         }
-        .societe{
+
+        .societe {
             background-image: url(./images/societe.png);
         }
-        .gf{
+
+        .gf {
             background-image: url(./images/GF.png);
         }
-        .others{
+
+        .others {
+            width: auto;
+            padding: 0 60px;
+            margin: 0;
             background-image: url(./images/credit.png);
+            background-repeat: no-repeat;
+            height: 60px;
+            background-size: 30px 30px;
+            background-position: 38px 12px;
+        }
+
+        .others option {
+            text-align: center;
+        }
+
+        .selected {
+            border: 1px solid #c6b07f;
+        }
+
+        .selected:after {
+            content: url(./images/checkoff.png);
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .bank2 {
+            width: 200px;
+            height: 40px;
         }
     </style>
 </head>
@@ -180,14 +220,19 @@
                                 <p class="form-control-static col-md-3 bank safety">平安银行</p>
                                 <p class="form-control-static col-md-3 bank societe">兴业银行</p>
                                 <p class="form-control-static col-md-3 bank gf">广发银行</p>
-                                <select name="" id="" class="col-md-3 bank others">
-                                    <option value="0">其他银行</option>
+                                <select name="" id="" class="col-md-3 others">
+                                    <!-- <option value="0">其他银行</option> -->
                                     <option value="1">北京银行</option>
                                     <option value="2">南京银行</option>
                                     <option value="3">渤海银行</option>
                                     <option value="4">东亚银行</option>
                                     <option value="5">宁波银行</option>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-3">
+                                <button type="submit" class="btn btn-warning bank2">下一步</button>
                             </div>
                         </div>
                     </form>
@@ -261,7 +306,59 @@
                                 </div>
                             </div>
                         </form> -->
-                        <div>这是申请提现的内容</div>
+                        <form action="" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="sum2" class="col-md-2 control-label">体现金额</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="sum2" placeholder="请输入金额">
+                                    <p class="form-control-static">最少提现100元起</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-2 text-right">提现方式</label>
+                                <div class="col-md-10">
+                                    <p class="form-control-static col-md-3 bank industry">工商银行</p>
+                                    <p class="form-control-static col-md-3 bank farming">农业银行</p>
+                                    <p class="form-control-static col-md-3 bank build">建设银行</p>
+                                    <p class="form-control-static col-md-3 bank china">中国银行</p>
+
+                                    <p class="form-control-static col-md-3 bank post">中国邮政</p>
+                                    <p class="form-control-static col-md-3 bank business">招商银行</p>
+                                    <p class="form-control-static col-md-3 bank livehood">民生银行</p>
+                                    <p class="form-control-static col-md-3 bank traffic">交通银行</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="deposit" class="col-md-2 control-label">开户行</label>
+                                <div class="col-md-10">
+                                    <input type="text" id="deposit" class="form-control" placeholder="请输入开户行全程">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber" class="col-md-2 control-label">银行卡号</label>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" id="cardNumber" placeholder="请输入银行卡号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-2 control-label">开户姓名</label>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" id="name" placeholder="请输入您的开户姓名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-2 control-label">手机号码</label>
+                                <div class="col-md-5">
+                                    <input type="text" class="form-control" id="name" placeholder="请输入到账接收通知手机号码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-2">
+                                    <button type="submit" class="btn btn-warning btn-block">立即申请</button>
+                                    <p class="form-control-static text-center">预计24小时之内到账</p>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -292,6 +389,12 @@
                     $('.graybg').height('auto');
                 }
             })
+        })
+        $('.bank').click(function () {
+            $(this).addClass('selected').siblings('.bank').removeClass('selected');
+        })
+        $('.others').change(function () {
+            $('.bank').removeClass('selected');
         })
     </script>
 </body>
