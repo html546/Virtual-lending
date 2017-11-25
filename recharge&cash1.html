@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,66 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/finance.css">
+    <link rel="stylesheet" href="./css/recharge&cash.css">
     <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <style>
+        .bgColor3 {
+            background: #fff;
+            padding: 60px 0px 280px;
+        }
+        .bank{
+            height: 60px;
+            width: 200px;
+            text-align: center;
+            line-height: 48px;
+            border: 1px solid #ccc;
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            background-position: 38px 12px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+        .industry{
+            background-image: url(./images/industry.png);
+        }
+        .farming{
+            background-image: url(./images/farming.png);
+        }
+        .build{
+            background-image: url(./images/build.png);
+        }
+        .china{
+            background-image: url(./images/china.png);
+        }
+        .post{
+            background-image: url(./images/post.png);
+        }
+        .business{
+            background-image: url(./images/business.png);
+        }
+        .livehood{
+            background-image: url(./images/livehood.png);
+        }
+        .traffic{
+            background-image: url(./images/traffic.png);
+        }
+        .safety{
+            background-image: url(./images/safety.png);
+        }
+        .societe{
+            background-image: url(./images/societe.png);
+        }
+        .gf{
+            background-image: url(./images/GF.png);
+        }
+        .others{
+            background-image: url(./images/credit.png);
+        }
+    </style>
 </head>
+
 <body>
     <!-- 导航与背景 -->
     <div class="container-fulid firstHead">
@@ -65,6 +122,151 @@
             <!-- /.container-fluid -->
         </nav>
     </div>
+    <!-- 我的账户充值和申请提现 -->
+    <div class="container-fulid graybg">
+        <div class="container">
+            <ul class="nav nav-tabs" id="my-tab" role="tablist">
+                <li role="presentation">
+                    <a href="./finance.html" role="tab" class="glyphicon glyphicon-chevron-left"></a>
+                </li>
+                <li role="presentation" class="active">
+                    <a href="#reCharge" aria-controls="reCharge" role="tab" data-toggle="tab">账户充值</a>
+                </li>
+                <li role="presentation">
+                    <a href="#cash" aria-controls="cash" role="tab" data-toggle="tab">申请提现</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active bgColor3" id="reCharge">
+                    <!-- 这是账户充值的内容 -->
+                    <!-- <div class="col-md-offset-2 col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5 class="text-center">接收地址：
+                                    <span class="text-warning" style="margin-right:20px;">1A2S3D4F5G6H7J8K9L1A2S3D4F</span>
+                                    <a class="btn btn-warning" href="#" role="button">更新</a>
+                                </h5>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-body">
+                                <p>温馨提示:</p>
+                                <p class="text-justify"> 您充值比特币上述地址后，需要整个比特币网络节点的确认，为了快速到账，您可以向比特币网络支付少量的手续费。到账时间为1次网络确认后（一般是10分钟-60分钟之间）。 最小充值金额是：0.0001
+                                    您的比特币地址不会经常改变，可以重复充值；如有更改，我们会尽量通过网站公告或邮件通知您。 如果您有疑问，请 查看比特币充值流程图示 或 联系客服
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="sum" class="col-md-2 text-right">充值金额</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="sum" placeholder="请输入金额">
+                                <p class="form-control-static">最低充值1元起</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 text-right">充值方式</label>
+                            <div class="col-md-10">
+                                <p class="form-control-static col-md-3 bank industry">工商银行</p>
+                                <p class="form-control-static col-md-3 bank farming">农业银行</p>
+                                <p class="form-control-static col-md-3 bank build">建设银行</p>
+                                <p class="form-control-static col-md-3 bank china">中国银行</p>
+
+                                <p class="form-control-static col-md-3 bank post">中国邮政</p>
+                                <p class="form-control-static col-md-3 bank business">招商银行</p>
+                                <p class="form-control-static col-md-3 bank livehood">民生银行</p>
+                                <p class="form-control-static col-md-3 bank traffic">交通银行</p>
+
+                                <p class="form-control-static col-md-3 bank safety">平安银行</p>
+                                <p class="form-control-static col-md-3 bank societe">兴业银行</p>
+                                <p class="form-control-static col-md-3 bank gf">广发银行</p>
+                                <select name="" id="" class="col-md-3 bank others">
+                                    <option value="0">其他银行</option>
+                                    <option value="1">北京银行</option>
+                                    <option value="2">南京银行</option>
+                                    <option value="3">渤海银行</option>
+                                    <option value="4">东亚银行</option>
+                                    <option value="5">宁波银行</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="cash">
+                    <!-- 这是申请提现的内容 -->
+                    <div class="bgColor2">
+                        <!-- <p class="col-md-offset-2 occupy text-justify" style="padding-right:80px;">温馨提示:请不要直接提币到ICO的众筹地址，这会导致您无法收取众筹到的数字资产。 提币到合约地址可能会发生合约执行失败，将导致转账失败，资产将退回到平台。 平台会人工处理退回到原账户，处理时间较长，请您谅解。
+                            网络转账费用是不固定的，取决于转账时合约执行需要消耗的算力。 当前平台内为提币支付的Gas Limit为90000，用于执行转账或合约执行。 如果此次交易消耗超过90000 gas，将导致转账失败，资产将退回到平台由人工处理退回到原账户，请您谅解。
+                        </p>
+                        <form action="" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="address" class="col-md-2 control-label">提取地址</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="address" placeholder="请输入粘贴正确的比特币地址">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-3">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">安全提现地址(该地址提现不再进行短信验证与谷歌验证)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="num" class="col-md-2 control-label">数量</label>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="num" placeholder="请输入比特币数量">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-2 control-label">资金密码</label>
+                                <div class="col-md-3">
+                                    <div class="col-md-8" style="padding:0px 0px;">
+                                        <input type="password" class="form-control" id="password" placeholder="请输入资金密码">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-link forget">忘记密码</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="proving" class="col-md-2 control-label">手机验证</label>
+                                <div class="col-md-3">
+                                    <div class="col-md-8" style="padding:0px 0px;">
+                                        <input type="text" class="form-control" id="proving" placeholder="请输入手机短信验证码">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button class="btn btn-default btn-sm cancel validate">获取验证码</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="google" class="col-md-2 control-label">谷歌验证码</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="google" placeholder="请输入谷歌验证码">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="remark" class="col-md-2 control-label">备注</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="remark">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-3">
+                                    <button type="submit" class="btn btn-warning sure">确定</button>
+                                </div>
+                            </div>
+                        </form> -->
+                        <div>这是申请提现的内容</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- footer -->
     <div class="base container-fulid">
         <div class="container">
@@ -93,4 +295,5 @@
         })
     </script>
 </body>
+
 </html>
