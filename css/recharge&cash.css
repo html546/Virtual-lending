@@ -26,3 +26,95 @@
     border: 1px solid #c6b07f;
     color: #c5b17c;
 }
+.bgColor3 {
+    background: #fff;
+    padding: 60px 0px 280px;
+}
+
+.bank {
+    height: 60px;
+    width: 200px;
+    text-align: center;
+    line-height: 48px;
+    border: 1px solid #ccc;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 38px 12px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.industry {
+    background-image: url(../images/industry.png);
+}
+
+.farming {
+    background-image: url(../images/farming.png);
+}
+
+.build {
+    background-image: url(../images/build.png);
+}
+
+.china {
+    background-image: url(../images/china.png);
+}
+
+.post {
+    background-image: url(../images/post.png);
+}
+
+.business {
+    background-image: url(../images/business.png);
+}
+
+.livehood {
+    background-image: url(../images/livehood.png);
+}
+
+.traffic {
+    background-image: url(../images/traffic.png);
+}
+
+.safety {
+    background-image: url(../images/safety.png);
+}
+
+.societe {
+    background-image: url(../images/societe.png);
+}
+
+.gf {
+    background-image: url(../images/GF.png);
+}
+
+.others {
+    width: auto;
+    padding: 0 60px;
+    margin: 0;
+    background-image: url(../images/credit.png);
+    background-repeat: no-repeat;
+    height: 60px;
+    background-size: 30px 30px;
+    background-position: 38px 12px;
+}
+
+.others option {
+    text-align: center;
+}
+
+.selected {
+    border: 1px solid #c6b07f;
+}
+
+.selected:after {
+    content: url(../images/checkoff.png);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.bank2 {
+    width: 200px;
+    height: 40px;
+}
