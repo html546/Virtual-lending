@@ -112,14 +112,21 @@
                                 <p class="form-control-static col-md-3 bank safety">平安银行</p>
                                 <p class="form-control-static col-md-3 bank societe">兴业银行</p>
                                 <p class="form-control-static col-md-3 bank gf">广发银行</p>
-                                <select name="" id="" class="col-md-3 others">
-                                    <!-- <option value="0">其他银行</option> -->
-                                    <option value="1">北京银行</option>
-                                    <option value="2">南京银行</option>
-                                    <option value="3">渤海银行</option>
-                                    <option value="4">东亚银行</option>
-                                    <option value="5">宁波银行</option>
-                                </select>
+                                <!-- <select name="" id="" class="col-md-3 others">
+                                    <option value="1">&nbsp;&nbsp;北京银行</option>
+                                    <option value="2">&nbsp;&nbsp;南京银行</option>
+                                    <option value="3">&nbsp;&nbsp;渤海银行</option>
+                                    <option value="4">&nbsp;&nbsp;东亚银行</option>
+                                    <option value="5">&nbsp;&nbsp;宁波银行</option>
+                                </select> -->
+                                <div class="col-md-3 others toggle">
+                                    <p>其他银行</p>
+                                    <p>北京银行</p>
+                                    <p>南京银行</p>
+                                    <p>渤海银行</p>
+                                    <p>东亚银行</p>
+                                    <p>宁波银行</p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -217,11 +224,18 @@
                 }
             })
         })
+
         $('.bank').click(function () {
             $(this).addClass('selected').siblings('.bank').removeClass('selected');
         })
-        $('.others').change(function () {
-            $('.bank').removeClass('selected');
+        
+        $('.others').click(function(){
+           $(this).toggleClass('toggle');
+        })
+        $('.toggle').children('p:not(:first)').click(function(){
+            // alert($(this).text());
+            var content = $(this).text();
+            $(this).parent('.others').children('p:first').text(content);
         })
     </script>
 </body>
